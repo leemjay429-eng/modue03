@@ -547,13 +547,16 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   justify-content:flex-end;gap:6px;
   font-size:var(--fs-cap);line-height:1.4;color:var(--csg-ink3)}
 .contents_div .csg-sl-nm{font-weight:700;color:var(--csg-navy-x)}
-.contents_div .csg-pk-x{grid-column:2 / -1;margin-top:-36px}
+.contents_div .csg-pk-x{grid-column:2 / -1;margin-top:-51px} /* 웹: 15px 추가로 올림(-36→-51) */
 /* 이미지·슬라이드는 .csg-pk-c 안(제목 뒤)에 있음 — 웹은 본문|이미지 두 칸 */
 .contents_div .csg-pk-c{display:grid;grid-template-columns:1fr 232px;grid-template-rows:auto auto 1fr;
   column-gap:28px;align-items:start}
 .contents_div .csg-pk-c>*{grid-column:1}
 .contents_div .csg-pk-c>.csg-pkfig,.contents_div .csg-pk-c>.csg-sl{grid-column:2;grid-row:1 / 4;align-self:stretch}
 .contents_div .csg-pk-x .csg-sublead{margin-top:0}
+/* 브랜드 쌀 클릭 안내문 — 웹·모바일 모두 '2026 우수 브랜드 쌀 10개' 바로 아래 */
+.contents_div .csg-pk-x .csg-note--sub{margin-top:3px}
+.contents_div .csg-pk-x .csg-note--sub+.csg-rices{margin-top:10px}
 
 /* ===== S4 : 할인 기획전 — 괘선 정의 리스트 ===== */
 /* S4 히어로 — 토끼 + 리드문 + 쿠폰 */
@@ -671,7 +674,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-pkfig::before{display:none}
   .contents_div .csg-doc .csg-sl .csg-pkfig{margin-top:0}
   .contents_div .csg-doc .csg-pk-c>.csg-note{margin-top:14px}
-  .contents_div .csg-doc .csg-pk-x{margin-top:-16px} /* 20px에서 36px 위로 */
+  .contents_div .csg-doc .csg-pk-x{margin-top:-33px} /* 20px에서 53px 위로(기존 -16px에서 17px 추가) */
   /* 슬라이드 — 페이지네이션 숨기고, '1 / 10' 표시만 이미지 안 오른쪽 아래에 겹침(브랜드명은 숨김) */
   .contents_div .csg-doc .csg-sl-dots{display:none}
   .contents_div .csg-doc .csg-sl-cap{position:absolute;right:6px;bottom:6px;z-index:3;margin:0;
@@ -680,8 +683,6 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-sl-nm{display:none}
   /* 브랜드 쌀 배지 — 중앙정렬, 간격 5px */
   .contents_div .csg-doc .csg-rices{justify-content:center;gap:5px}
-  /* 브랜드 쌀 클릭 안내문 — 숨김 */
-  .contents_div .csg-doc .csg-pk-x .csg-note{display:none}
   /* 브랜드 쌀 슬라이드 — 좌우 버튼 숨김(넘김은 스와이프·자동) */
   .contents_div .csg-doc .csg-sl-b{display:none}
 }
@@ -928,6 +929,15 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 @container (max-width:725px){
   .contents_div .csg-doc .csg-why-rows{--rab-w:139px;--rab-h:264px;--rab-right:25px;--rab-cut:75px}
 }
+@container (min-width:669px) and (max-width:716px){
+  /* 추석선물 추천 — '2026년 10대 고품질 브랜드 쌀' 제목 한 줄 유지(글자 크기 그대로, 자간만 폭에 따라 최대 -1px)
+     713px -0.34px(기본) → 701px -1px */
+  .contents_div .csg-doc .csg-pick-h--rice{letter-spacing:clamp(-1px,calc(5.2632cqi - 37.89px),-0.34px)}
+}
+@container (max-width:700px){
+  /* 추석선물 추천 — 웹 배치 중 700 이하(669~700)는 제목이 두 줄이 되어 브랜드 쌀 제목이 본문에 겹치므로 덜 올림 */
+  .contents_div .csg-doc .csg-pk-x{margin-top:-28px}
+}
 @container (max-width:668px){
   .contents_div .csg-doc .csg-why-rows{--rab-w:130px;--rab-h:247px;--rab-right:16px;--rab-cut:71px}
   .contents_div .csg-doc .csg-h1-br{display:block}
@@ -952,7 +962,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-pkfig::before{display:none}
   .contents_div .csg-doc .csg-sl .csg-pkfig{margin-top:0}
   .contents_div .csg-doc .csg-pk-c>.csg-note{margin-top:14px}
-  .contents_div .csg-doc .csg-pk-x{margin-top:-16px} /* 20px에서 36px 위로 */
+  .contents_div .csg-doc .csg-pk-x{margin-top:-33px} /* 20px에서 53px 위로(기존 -16px에서 17px 추가) */
   /* 슬라이드 — 페이지네이션 숨기고, '1 / 10' 표시만 이미지 안 오른쪽 아래에 겹침(브랜드명은 숨김) */
   .contents_div .csg-doc .csg-sl-dots{display:none}
   .contents_div .csg-doc .csg-sl-cap{position:absolute;right:6px;bottom:6px;z-index:3;margin:0;
@@ -961,8 +971,6 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-sl-nm{display:none}
   /* 브랜드 쌀 배지 — 중앙정렬, 간격 5px */
   .contents_div .csg-doc .csg-rices{justify-content:center;gap:5px}
-  /* 브랜드 쌀 클릭 안내문 — 숨김 */
-  .contents_div .csg-doc .csg-pk-x .csg-note{display:none}
   /* 브랜드 쌀 슬라이드 — 좌우 버튼 숨김(넘김은 스와이프·자동) */
   .contents_div .csg-doc .csg-sl-b{display:none}
 }
@@ -1108,6 +1116,10 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-foot{--bk:0.68}
   .contents_div .csg-doc .csg-why-rows{--rab-w:88px;--rab-h:167px;--rab-right:23px;--rab-cut:47px}
 }
+@container (max-width:456px){
+  /* 추석선물 추천 — 430~456은 이미지가 커지며 본문과 브랜드 쌀 제목 간격이 좁아지므로 폭에 따라 올림을 줄임(-33→-22px) */
+  .contents_div .csg-doc .csg-pk-x{margin-top:clamp(-33px,calc(43cqi - 217.9px),-22px)}
+}
 @container (max-width:448px){
   /* 푸터 벽돌 4단계 ×0.61 */
   .contents_div .csg-doc .csg-foot{--bk:0.61}
@@ -1185,6 +1197,10 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 @container (max-width:324px){
   /* 토끼+별 세트 360px 대비 5% 축소 */
   .contents_div .csg-doc .csg-why-rows{--rab-w:49.4px;--rab-h:94.05px;--rab-right:21px;--rab-cut:26.6px}
+}
+@container (max-width:312px){
+  /* 추석선물 추천 — 309~312는 본문이 한 줄 늘어 브랜드 쌀 제목이 본문에 붙으므로 기존값 유지 */
+  .contents_div .csg-doc .csg-pk-x{margin-top:-16px}
 }
 @container (max-width:308px){
   /* 푸터 벽돌 9단계 ×0.38 */
@@ -1424,13 +1440,13 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
           <h3 class="csg-pick-h">9월 이달의 전통주 ‘섬진강바람오크40’</h3>
           <figure class="csg-pkfig"><img src="img/섬진강바람오크40.webp" alt="섬진강바람 오크40" loading="lazy" decoding="async"></figure>
           <p class="csg-pick-b">잘 익은 황매실, 돌배, 유자 등 지역 농산물을 원료로 했으며 매실과 돌배를 발효‧증류한 뒤 오크통에서 1년간 숙성해 완성. 매실 특유의 향긋한 풍미와 오크 숙성에서 더해진 깊은 향과 맛이 조화를 이루는 것이 특징</p>
-          <p class="csg-note">*구매처: <a class="csg-lk" href="https://seomjinspring.com/shop/?idx=12" target="_blank" rel="noopener noreferrer">섬진강의봄 공식 누리집</a>, <a class="csg-lk" href="https://www.jnmall.kr/" target="_blank" rel="noopener noreferrer">남도장터</a> 등</p>
+          <p class="csg-note">(구매처: <a class="csg-lk" href="https://seomjinspring.com/shop/?idx=12" target="_blank" rel="noopener noreferrer">섬진강의봄 공식 누리집</a>, <a class="csg-lk" href="https://www.jnmall.kr/" target="_blank" rel="noopener noreferrer">남도장터</a> 등)</p>
         </div>
       </article>
       <article class="csg-pk">
         <div class="csg-pk-n" aria-hidden="true">02</div>
         <div class="csg-pk-c">
-          <h3 class="csg-pick-h">2026년 10대 고품질 브랜드 쌀</h3>
+          <h3 class="csg-pick-h csg-pick-h--rice">2026년 10대 고품질 브랜드 쌀</h3>
           <div class="csg-sl" aria-roledescription="carousel" aria-label="2026 우수 브랜드 쌀 10개">
             <div class="csg-sl-win"><ul class="csg-sl-track"><li><figure class="csg-pkfig"><img src="img/대숲맑은담양쌀.webp" alt="대숲맑은담양쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/땅끝햇살.webp" alt="땅끝햇살" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/왕건이탐낸쌀.webp" alt="왕건이탐낸쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/녹차미인보성쌀.webp" alt="녹차미인보성쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/아르미쌀.webp" alt="아르미쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/사계절이사는집.webp" alt="사계절이사는집" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/달마지쌀.webp" alt="달마지쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/수호천사건강미.webp" alt="수호천사건강미" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/황토랑쌀.webp" alt="황토랑쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/보배진미쌀.webp" alt="보배진미쌀" loading="lazy" decoding="async"></figure></li></ul>
               <button type="button" class="csg-sl-b csg-sl-prev" aria-label="이전 브랜드"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 4.5 L8 12 L15 19.5" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -1443,10 +1459,10 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
         </div>
         <div class="csg-pk-x">
           <p class="csg-sublead"><span class="csg-dia" aria-hidden="true"></span>2026 우수 브랜드 쌀 10개</p>
+          <p class="csg-note csg-note--sub">(브랜드명을 클릭하면 판매 페이지로 이동합니다)</p>
           <ul class="csg-rices">
 <li><a class="csg-rice" href="https://www.jnmall.kr/product/5402-2564" target="_blank" rel="noopener noreferrer">대숲맑은담양쌀</a></li><li><a class="csg-rice" href="https://www.hnmiso.com/kwa-ABS_goods_v-467-1001001" target="_blank" rel="noopener noreferrer">땅끝햇살</a></li><li><a class="csg-rice" href="https://najumall.kr/product/%EB%82%98%EC%A3%BC%EC%8B%9C%EB%86%8D%ED%98%91%EC%8C%80%EC%A1%B0%ED%95%A9-25%EB%85%84-%ED%96%85%EC%8C%80-%EC%99%95%EA%B1%B4%EC%9D%B4-%ED%83%90%EB%82%B8%EC%8C%80-10kg%EC%A0%84%EB%82%A8-10%EB%8C%80-%EA%B3%A0%ED%92%88%EC%A7%88-%EB%B8%8C%EB%9E%9C%EB%93%9C-%EC%8C%80-%EC%84%A0%EC%A0%95/918/" target="_blank" rel="noopener noreferrer">왕건이탐낸쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/748-365" target="_blank" rel="noopener noreferrer">녹차미인보성쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/959-521" target="_blank" rel="noopener noreferrer">아르미쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1493-39779" target="_blank" rel="noopener noreferrer">사계절이사는집</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1120-646" target="_blank" rel="noopener noreferrer">달마지쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/698-335" target="_blank" rel="noopener noreferrer">수호천사건강미</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/889-476" target="_blank" rel="noopener noreferrer">황토랑쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1337-34047" target="_blank" rel="noopener noreferrer">보배진미쌀</a></li>
           </ul>
-          <p class="csg-note">*브랜드명을 클릭하면 판매 페이지로 이동합니다</p>
         </div>
       </article>
     </div>
