@@ -1,0 +1,1910 @@
+<!-- 모바일 좌우 패딩 16 -->
+<script>
+if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
+  var s=document.createElement('style');
+  s.textContent='body{margin:0}@media(max-width:700px){.contents_div{padding:0 16px}}';
+  document.head.appendChild(s);
+}
+</script>
+
+
+<script>
+(function(){
+  try{
+    if(!document.querySelector('meta[name="viewport"]')){
+      var m=document.createElement('meta');
+      m.setAttribute('name','viewport');
+      m.setAttribute('content','width=device-width, initial-scale=1');
+      (document.head||document.getElementsByTagName('head')[0]||document.documentElement).appendChild(m);
+    }
+  }catch(e){}
+})();
+</script>
+
+<style>
+
+/* ===== Font ===== */
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'GmarketSansBold';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'GmarketSansMedium';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight:400;font-display:swap}
+
+/* ===== Reset (scoped) ===== */
+.contents_div .csg-wrap,.contents_div .csg-wrap *,
+.contents_div .csg-wrap *::before,.contents_div .csg-wrap *::after{box-sizing:border-box}
+.contents_div .csg-wrap :where(h1,h2,h3,p,ul,ol,li,figure,dl,dt,dd){margin:0;padding:0}
+.contents_div .csg-wrap :where(ul,ol){list-style:none}
+.contents_div .csg-wrap :where(img){max-width:100%;display:block;border:0}
+.contents_div .csg-wrap :where(a){text-decoration:none;color:inherit}
+
+/* ===== Wrap / Tokens ===== */
+.contents_div .csg-wrap{max-width:800px;margin:0 auto;container-type:inline-size;overflow:hidden;
+  border-radius:0;background:#FFF9EA}
+.contents_div .csg-doc{
+  --csg-navy:#2F569B; --csg-navy-d:#2C4784; --csg-navy-x:#213869; --csg-sky:#5079BD;
+  --csg-nav-a:#3E5B8D; --csg-nav-b:#27416E;
+  --csg-moon:#FFD84A; --csg-yl:#FFE23C; --csg-gold:#FBC22F; --csg-gold-d:#C1830D;
+  --csg-cream:#FFF7DF; --csg-cream2:#FFEFCB; --csg-cream3:#FFF9EA; --csg-band:#FFE9B8;
+  --csg-frame:#C09A62; --csg-frame-l:#E0C69A;
+  --csg-sep:#EFE1C4; --num-sz:26px;
+  --csg-b4a:#7FB2F2; --csg-b4b:#FBC22F; --csg-b4c:#F2503A; --csg-b4d:#17B8A0;
+  --csg-org:#F26B27; --csg-grn:#008C78; --csg-red:#DB3A22;
+  --csg-ink:#2C3550; --csg-ink2:#59688E; --csg-ink3:#7E7053; --csg-line:#F5DFB0;
+
+  --fs-h2:31px; --fs-foot:34px;
+  --fs-h3:22px; --fs-kicker:15px; --fs-num:14px;
+  --fs-body:17px; --fs-lead:16px; --fs-nav:16px;
+  --fs-tag:12.5px; --fs-micro:13.5px;
+  --fs-cap:13px; --fs-note:11px; --fs-hash:14.5px;
+  --gut:50px; --band:70px; --kick:32px;
+  --cap-h:24px; --cap-px:11px; --cap-fs:13px; --cap-fw:700;
+  --cd-py:30px; --cd-px:28px;
+
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Malgun Gothic',sans-serif;
+  font-size:var(--fs-body); line-height:1.6; letter-spacing:-0.02em;
+  color:var(--csg-ink); background:var(--csg-cream3);
+  -webkit-text-size-adjust:100%;
+}
+.contents_div .csg-doc :where(h1,h2,h3){font-family:'Paperozi','Pretendard',sans-serif;word-break:keep-all}
+.contents_div .csg-doc p,.contents_div .csg-doc li{word-break:keep-all}
+
+/* ===== Section base ===== */
+.contents_div .csg-sec{position:relative;width:100%;border-bottom:1px solid var(--csg-sep);
+  padding:calc(var(--band) + 12px) clamp(16px,6.25%,50px) var(--band);text-align:center}
+.contents_div .csg-defs,.contents_div .csg-benefit,.contents_div .csg-way,
+.contents_div .csg-why,
+.contents_div .csg-panel,.contents_div .csg-picks,.contents_div .csg-info{text-align:left}
+.contents_div .csg-sec--cream{--csg-sep:#F0DFBC;background:var(--csg-cream3);
+  background-image:linear-gradient(160deg,#FFF9EA 0%,#FCEFD5 100%)}
+.contents_div .csg-sec[data-sec="s4"]{border-bottom:0}
+.contents_div .csg-dash{width:100%;padding:0 clamp(16px,6.25%,50px);background:var(--csg-cream3);
+  background-image:linear-gradient(160deg,#FCEFD5 0%,#FCEFD5 100%)}
+.contents_div .csg-dash::before{content:'';display:block;height:2px;background-repeat:repeat-x;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='2'%3E%3Cline x1='1' y1='1' x2='11' y2='1' stroke='%23D9BC8C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.contents_div .csg-sec[data-sec="s5"]{padding-bottom:calc(var(--band) + 55px);
+  --csg-sep:#1B2743;background:#FDE9BC;
+  background-image:linear-gradient(180deg,#FFF6DC 0%,#FDE7B6 24%,#E4D4BC 44%,
+    #A2A9B9 62%,#63728F 78%,#334263 90%,#1B2743 100%)}
+@keyframes csg-lanfloat{0%,100%{transform:translateY(0) rotate(var(--lan-rot,0deg))}
+  50%{transform:translateY(-13px) rotate(var(--lan-rot,0deg))}}
+.contents_div .csg-lan{position:absolute;z-index:0;pointer-events:none;height:auto;
+  animation:csg-lanfloat 5.4s ease-in-out infinite;will-change:transform}
+.contents_div .csg-lan--a{left:-3.375%;bottom:74px;width:25.4%;--lan-rot:-3deg;
+  animation-duration:5.8s}
+.contents_div .csg-lan--b{right:-0.5%;bottom:43px;width:17%;
+  animation-duration:4.6s;animation-delay:-2.1s}
+.contents_div .csg-sec[data-sec="s5"] .csg-kick,
+.contents_div .csg-sec[data-sec="s5"] .csg-h2,
+.contents_div .csg-sec[data-sec="s5"] .csg-lead,
+.contents_div .csg-sec[data-sec="s5"] .csg-evs{position:relative;z-index:1}
+.contents_div .csg-roof{position:absolute;left:0;bottom:0;z-index:2;
+  width:100%;height:auto;pointer-events:none;transform:translateY(75%)}
+.contents_div .csg-sec--band{--csg-sep:#EDD199;background:var(--csg-band);
+  background-image:linear-gradient(160deg,#FFEDC6 0%,#F9E0AE 100%)}
+.contents_div .csg-sec--navy{--csg-sep:#1B3766;overflow:hidden;background:var(--csg-navy);
+  background-image:linear-gradient(160deg,#2F569B 0%,#22447E 100%);color:var(--csg-cream)}
+.contents_div .csg-cloud{position:absolute;height:auto;pointer-events:none;
+  color:rgba(255,255,255,.42)}
+.contents_div .csg-cloud--a{top:37px;right:-4px;width:165px;
+  -webkit-mask-image:linear-gradient(to right,#000 42%,rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(to right,#000 42%,rgba(0,0,0,0) 100%)}
+.contents_div .csg-cloud--b{top:135px;left:0;width:120px;
+  -webkit-mask-image:linear-gradient(to left,#000 42%,rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(to left,#000 42%,rgba(0,0,0,0) 100%)}
+.contents_div .csg-band4{position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  width:240px;height:8px;pointer-events:none;
+  background:linear-gradient(90deg,
+    var(--csg-b4a) 0 25%,var(--csg-b4b) 25% 50%,
+    var(--csg-b4c) 50% 75%,var(--csg-b4d) 75% 100%)}
+
+.contents_div .csg-kick{display:inline-flex;align-items:center;justify-content:center;
+  height:var(--kick);padding:0.13em 16px 0;border-radius:999px;
+  font-family:'GmarketSansMedium','Paperozi','Pretendard',sans-serif;
+  font-size:var(--fs-kicker);font-weight:400;line-height:1.2;letter-spacing:.01em;
+  background:var(--csg-navy);color:var(--csg-moon)}
+.contents_div .csg-sec--navy .csg-kick{background:var(--csg-moon);color:var(--csg-navy-x)}
+.contents_div .csg-sec--band .csg-kick{background:var(--csg-navy);color:var(--csg-moon)}
+
+.contents_div .csg-h2{margin-top:18px;font-size:var(--fs-h2);font-weight:800;line-height:1.35;
+  letter-spacing:-0.01em;color:var(--csg-navy-x)}
+.contents_div .csg-sec--navy .csg-h2{color:var(--csg-cream)}
+.contents_div .csg-h2 .csg-h2-p{color:var(--csg-gold-d)}
+.contents_div .csg-sec--navy .csg-h2 .csg-h2-p{color:var(--csg-yl)}
+.contents_div .csg-lead{margin:16px auto 0;max-width:680px;font-size:var(--fs-lead);
+  line-height:1.6;color:var(--csg-ink2)}
+.contents_div .csg-sec--navy .csg-lead{color:#DCE6F5}
+/* 수산물 기획전·추석 이벤트 리드문만 조금 더 진하게 (#59688E → #434F74) */
+.contents_div .csg-lead.csg-h4-lead,
+.contents_div .csg-sec[data-sec="s5"] .csg-lead{color:#434F74}
+/* 리드문 줄바꿈(csg-nbr) — 기본 유지. 끊어 둔 줄이 폭에 안 들어가 한 번 더 꺾이는 문단만
+   스크립트가 is-flow를 붙여 그 문단의 줄바꿈을 해제 */
+.contents_div .csg-doc .is-flow .csg-nbr{display:none}
+.contents_div .csg-hint{display:none;margin:0;font-size:13.5px;line-height:1.5;
+  letter-spacing:-0.02em;color:var(--csg-ink3)}
+.contents_div .csg-nohover{display:inline}
+@media (min-width:601px) and (hover:hover) and (pointer:fine){
+  .contents_div .csg-hint{display:block}
+  .contents_div .csg-nohover{display:none}
+}
+
+/* ===== Hero ===== */
+.contents_div .csg-hero{position:relative;display:block;width:100%;max-width:800px;margin:0 auto;padding:0;
+  aspect-ratio:1600 / 2114; /* 이미지 로드 전 자리 확보 (CLS 방지) */
+  overflow:hidden;line-height:0}
+.contents_div .csg-hero .csg-hero-img{display:block;width:100%;max-width:100%;height:auto;margin:0;border:0;
+  -webkit-user-drag:none;user-select:none}
+/* 배경: 항상 보임 */
+.contents_div .csg-hero .csg-hero-bg{position:relative;z-index:1}
+/* 오브젝트 레이어 공통 */
+.contents_div .csg-hero .csg-hero-item{position:absolute;top:0;right:0;bottom:0;left:0;margin:0;pointer-events:none}
+.contents_div .csg-hero .csg-hero-item,
+.contents_div .csg-hero .csg-hero-item .csg-hero-img{transform-origin:var(--hr-ox) var(--hr-oy)} /* 오브젝트 중심 기준 */
+/* 겹침 순서: 배경(1) < 밤 < 배 < 사과 < 굴비(999) / --hr-delay: 등장 순서(배 → 사과 → 굴비 → 밤) */
+.contents_div .csg-hero .csg-hero-item--chestnut{z-index:10; --hr-ox:22.81%;--hr-oy:71.05%;--hr-delay:.75s;--hr-dur:2.6s;--hr-y:-0.55%;--hr-rot:4deg}
+.contents_div .csg-hero .csg-hero-item--pear    {z-index:20; --hr-ox:71.44%;--hr-oy:47.26%;--hr-delay:0s;  --hr-dur:3.2s;--hr-y:-0.8%; --hr-rot:-3deg}
+.contents_div .csg-hero .csg-hero-item--apple   {z-index:30; --hr-ox:14.78%;--hr-oy:59.25%;--hr-delay:.25s;--hr-dur:2.9s;--hr-y:-0.7%; --hr-rot:3deg}
+.contents_div .csg-hero .csg-hero-item--gulbi   {z-index:999;--hr-ox:86%;   --hr-oy:63.01%;--hr-delay:.5s; --hr-dur:3.4s;--hr-y:-0.75%;--hr-rot:-2deg}
+/* JS가 동작할 때만 숨김 → JS가 막힌 환경에서는 정지 이미지로 표시 */
+.contents_div .csg-hero.csg-hero--ready .csg-hero-item{opacity:0;transform:scale(0)}
+/* 뷰포트 35% 진입 → 통통통 등장 */
+.contents_div .csg-hero.csg-hero--active .csg-hero-item{
+  animation:csg-heroPop .8s cubic-bezier(.3,.7,.4,1) var(--hr-delay) both}
+/* 등장 후 둥둥 유지 */
+.contents_div .csg-hero.csg-hero--active .csg-hero-item .csg-hero-img{
+  animation:csg-heroFloat var(--hr-dur) ease-in-out calc(var(--hr-delay) + .8s) infinite}
+@keyframes csg-heroPop{
+  0%{opacity:0;transform:scale(0)}
+  35%{opacity:1;transform:scale(1.22)}
+  55%{transform:scale(.88)}
+  72%{transform:scale(1.08)}
+  86%{transform:scale(.97)}
+  100%{opacity:1;transform:scale(1)}}
+@keyframes csg-heroFloat{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(var(--hr-y)) rotate(var(--hr-rot))}}
+/* 동작 줄이기 설정 사용자: 애니메이션 없이 표시 */
+@media (prefers-reduced-motion:reduce){
+  .contents_div .csg-hero.csg-hero--ready .csg-hero-item,
+  .contents_div .csg-hero.csg-hero--active .csg-hero-item,
+  .contents_div .csg-hero.csg-hero--active .csg-hero-item .csg-hero-img{animation:none;opacity:1;transform:none}
+}
+
+/* ===== Intro ===== */
+.contents_div .csg-intro{width:100%;padding:58px clamp(16px,6.25%,50px);text-align:center;
+  background:var(--csg-cream2);
+  background-image:linear-gradient(160deg,#FFF4D8 0%,#FBE8BE 100%)}
+.contents_div .csg-h1{margin-top:18px;font-size:var(--fs-foot);font-weight:800;line-height:1.32;
+  letter-spacing:-0.01em;color:var(--csg-navy-x)}
+.contents_div .csg-h1 em{font-style:normal;color:var(--csg-org)}
+.contents_div .csg-h1-br{display:none}
+.contents_div .csg-h2-br{display:none}
+/* 좁은 화면용 짧은 문구 — 기본은 긴 문구 */
+.contents_div .csg-txt-s{display:none}
+.contents_div .csg-frame{position:relative;box-sizing:border-box;
+  --fr1:4px; --fr2:10px; --fr3:16px; --frs:7px;
+  max-width:700px;margin:0 auto;padding:54px 54px 58px;
+  background:#FBF4E2;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23p)' opacity='0.07'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23p)' opacity='0.07'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='420' height='420' filter='url(%23p)' opacity='0.09'/%3E%3C/svg%3E"),
+    radial-gradient(130% 100% at 18% 8%,#FFFEFA 0%,rgba(255,254,250,0) 62%),
+    linear-gradient(160deg,#FFFEFA 0%,#FBF3E1 100%);
+  background-size:180px 180px,300px 300px,420px 420px,auto,auto;
+  border:11px solid var(--csg-frame);
+  border-radius:5px;
+  box-shadow:
+    0 0 0 1px #C6A16A,
+    0 0 0 2px #D2AF7C,
+    0 0 0 3px #DFC292,
+    0 0 0 4px #EAD4AE,
+    0 0 0 5px #F4E3C8,
+    0 16px 28px -10px rgba(112,82,38,.38),
+    0 5px 10px -3px rgba(112,82,38,.26);
+  text-align:center}
+/* 씨줄·날줄이 모서리에서 서로 지나쳐 격자를 만든다 */
+.contents_div .csg-frame::before{content:'';position:absolute;inset:0;pointer-events:none;
+  border-radius:4px;overflow:hidden;
+  box-shadow:
+    0 4px 9px -1px rgba(96,68,30,.34),
+    0 1px 3px rgba(96,68,30,.26),
+    inset 0 1px 0 rgba(255,255,255,.85),
+    inset 1px 0 0 rgba(255,255,255,.55),
+    inset -1px 0 0 rgba(150,116,60,.14),
+    inset 0 -1px 0 rgba(150,116,60,.18);
+  background-repeat:no-repeat;
+  background-image:
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l)),
+    linear-gradient(var(--csg-frame-l),var(--csg-frame-l));
+  background-size:100% 1px,100% 1px,100% 1px,100% 1px,100% 1px,100% 1px,
+    1px 100%,1px 100%,1px 100%,1px 100%,1px 100%,1px 100%;
+  background-position:
+    0 var(--fr1),0 var(--fr2),0 var(--fr3),
+    0 calc(100% - var(--fr1)),0 calc(100% - var(--fr2)),0 calc(100% - var(--fr3)),
+    var(--fr1) 0,var(--fr2) 0,var(--fr3) 0,
+    calc(100% - var(--fr1)) 0,calc(100% - var(--fr2)) 0,calc(100% - var(--fr3)) 0}
+/* 안쪽 교차점에 얹히는 작은 사각 */
+.contents_div .csg-knot{position:absolute;top:-9px;right:40px;
+  width:49px;height:190px;pointer-events:none}
+.contents_div .csg-fr-c{position:absolute;width:var(--frs);height:var(--frs);
+  border:1px solid var(--csg-frame-l);pointer-events:none}
+.contents_div .csg-fr-tl{top:var(--fr3);left:var(--fr3)}
+.contents_div .csg-fr-tr{top:var(--fr3);right:var(--fr3)}
+.contents_div .csg-fr-bl{bottom:var(--fr3);left:var(--fr3)}
+.contents_div .csg-fr-br{bottom:var(--fr3);right:var(--fr3)}
+.contents_div .csg-intro-p{position:relative;margin:19px auto 0;max-width:600px;font-size:var(--fs-lead);
+  line-height:1.56;color:#6B5A33}
+
+/* ===== Nav ===== */
+.contents_div .csg-nav{width:100%;background:var(--csg-nav-b);
+  background-image:linear-gradient(100deg,var(--csg-nav-a) 0%,var(--csg-nav-b) 100%)}
+.contents_div .csg-nav-in{display:grid;grid-template-columns:repeat(5,1fr)}
+.contents_div .csg-nav-btn{position:relative;display:flex;align-items:center;justify-content:center;
+  text-align:center;min-height:70px;padding:8px 4px;border:0;background:transparent;
+  color:var(--csg-cream);font-family:inherit;font-size:var(--fs-nav);font-weight:700;
+  line-height:1.35;letter-spacing:-0.03em;white-space:nowrap;cursor:pointer;
+  transition:background .18s ease,color .18s ease}
+.contents_div .csg-nav-btn+.csg-nav-btn::before{content:'';position:absolute;left:0;top:50%;
+  width:1px;height:21px;margin-top:-10.5px;background:rgba(255,252,235,.28);
+  transition:opacity .18s ease}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-nav-btn:hover{background:#0B2858;color:#FFF06F}
+}
+.contents_div .csg-nav-btn:active{background:var(--csg-moon);color:var(--csg-navy-x)}
+.contents_div .csg-nav-btn:focus-visible{outline:3px solid var(--csg-org);outline-offset:-3px}
+
+/* ===== S1 : 기부제 안내 — 테두리 없는 정의 2단 + 단일 패널 + 가로 바 ===== */
+.contents_div .csg-defs{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:16px 34px}
+.contents_div .csg-def{padding-left:18px;border-left:3px solid rgba(255,230,125,.55)}
+.contents_div .csg-def-h{font-size:var(--fs-h3);
+  font-weight:800;line-height:1.45;color:var(--csg-moon)}
+.contents_div .csg-def-b{margin-top:12px;font-size:var(--fs-body);line-height:1.6;color:#E7EEFA}
+.contents_div .csg-benefit{margin-top:30px;padding:var(--cd-py) var(--cd-px);border-radius:22px;
+  background:rgba(255,252,235,.10);border:2px solid rgba(255,230,125,.34)}
+.contents_div .csg-onum{margin-top:18px;display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+.contents_div .csg-onum>li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;align-content:start}
+.contents_div .csg-onum>li>.csg-num{margin-top:calc((var(--fs-body) * 1.6 - var(--num-sz)) / 2)}
+.contents_div .csg-num{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  width:var(--num-sz);height:var(--num-sz);border-radius:50%;background:var(--csg-gold);color:#3A2A05;
+  font-family:'GmarketSansBold','Pretendard',sans-serif;font-size:var(--fs-num);line-height:1;
+  padding-top:0.2em}
+.contents_div .csg-onum>li>strong{font-weight:700;font-size:var(--fs-body);line-height:1.6;color:var(--csg-cream)}
+.contents_div .csg-sub{grid-column:1 / -1;margin-top:10px;display:grid;gap:6px;
+  padding:14px 16px;border-radius:14px;background:rgba(38,58,97,.34)}
+.contents_div .csg-sub>li{position:relative;padding-left:14px;font-size:16px;
+  line-height:1.6;color:#DCE6F5}
+.contents_div .csg-sub>li::before{content:'';position:absolute;left:0;top:.72em;width:6px;height:2px;
+  border-radius:2px;background:var(--csg-moon)}
+.contents_div .csg-sub-eg{margin-top:4px;padding:10px 0 0;border-top:1px solid rgba(255,230,125,.30);
+  color:var(--csg-moon)}
+.contents_div .csg-sub-eg::before{display:none}
+.contents_div .csg-way{position:relative;margin-top:30px;display:flex;align-items:center;justify-content:flex-start;
+  gap:clamp(20px, calc((100cqi - 569px) * .1299 + 20px), 50px);padding:14px 14px 14px 28px;border-radius:999px;background:rgba(38,58,97,.45);
+  border:2px solid rgba(255,230,125,.22)}
+.contents_div .csg-rabbit{position:absolute;right:var(--rab-right);top:var(--rab-top);z-index:0;
+  width:var(--rab-w);height:var(--rab-h);pointer-events:none;user-select:none;
+  filter:drop-shadow(0 calc(var(--rab-w) * .018) calc(var(--rab-w) * .036) rgba(12,28,60,.30));
+  clip-path:inset(0 0 var(--rab-cut) 0)}
+.contents_div .csg-spk{position:absolute;z-index:0;pointer-events:none;--spk-s:1.25;
+  width:max(var(--spk-min),calc(var(--rab-w) * var(--spk-k)));aspect-ratio:1;background:var(--csg-moon);
+  transform:scale(var(--spk-s));transform-origin:50% 50%;
+  /* 최소 크기로 커진 만큼 중심을 되돌림 → 별 중심은 항상 토끼 크기에 비례 */
+  margin-top:calc((var(--rab-w) * var(--spk-k) - max(var(--spk-min),calc(var(--rab-w) * var(--spk-k)))) / 2);
+  margin-right:calc((var(--rab-w) * var(--spk-k) - max(var(--spk-min),calc(var(--rab-w) * var(--spk-k)))) / 2);
+  clip-path:polygon(50% 0%,59% 41%,100% 50%,59% 59%,50% 100%,41% 59%,0% 50%,41% 41%)}
+/* 별 위치 = 웹(토끼 166×315px) 기준 px ÷ 토끼 크기. 토끼와 한 세트로 전 구간 동일 비율 */
+.contents_div .csg-spk--1{--spk-k:.085;--spk-min:9px;
+  right:calc(var(--rab-right) + var(--rab-w) * 184 / 166);top:calc(var(--rab-top) + var(--rab-h) * 124.5 / 315)}
+.contents_div .csg-spk--2{--spk-k:.055;--spk-min:6.5px;opacity:.75;
+  right:calc(var(--rab-right) + var(--rab-w) * 199 / 166);top:calc(var(--rab-top) + var(--rab-h) * 162 / 315)}
+.contents_div .csg-spk--3{--spk-k:.066;--spk-min:7.5px;opacity:.8;background:var(--csg-cream);
+  right:calc(var(--rab-right) - var(--rab-w) * 15.974 / 166);top:calc(var(--rab-top) + var(--rab-h) * 176.4 / 315)}
+.contents_div .csg-spk--4{--spk-k:.05;--spk-min:6px;opacity:.65;
+  right:calc(var(--rab-right) + var(--rab-w) * 183 / 166);top:calc(var(--rab-top) + var(--rab-h) * 193.475 / 315)}
+.contents_div .csg-way-h{font-size:var(--fs-h3);
+  font-weight:800;line-height:1.45;color:var(--csg-moon)}
+.contents_div .csg-way .csg-cta{margin-top:0;flex:0 0 auto;padding-left:30px;padding-right:30px}
+.contents_div .csg-why{position:relative;margin-top:30px;padding:var(--cd-py) var(--cd-px);border-radius:22px;
+  background:rgba(38,58,97,.45);border:2px solid rgba(255,230,125,.22)}
+.contents_div .csg-why-rows{position:relative;margin-top:18px;display:grid;gap:14px;
+  --rab-w:166px;--rab-h:315px;--rab-right:25px;--rab-cut:90px;--rab-top:calc(var(--rab-cut) - var(--rab-h))}
+.contents_div .csg-why-row{position:relative;z-index:1;padding:14px 16px;border-radius:14px;background:#395380}
+.contents_div .csg-why-q{font-size:var(--fs-body);font-weight:700;line-height:1.6;color:var(--csg-moon)}
+.contents_div .csg-why-p{margin-top:8px;font-size:var(--fs-body);line-height:1.6;color:#DCE6F5}
+.contents_div .csg-why-p+.csg-why-q{margin-top:16px}
+.contents_div .csg-why-cap{margin-top:20px;font-size:var(--fs-lead);line-height:1.6;
+  color:#DCE6F5;text-align:center}
+.contents_div .csg-why-sum{margin-top:10px;padding:14px 18px;border-radius:14px;
+  background:var(--csg-moon);color:var(--csg-navy-x);
+  font-size:var(--fs-body);font-weight:700;line-height:1.6;text-align:center}
+
+/* ===== CTA ===== */
+.contents_div .csg-cta{margin-top:28px;display:inline-flex;align-items:center;gap:10px;
+  min-height:48px;padding:12px 22px;border-radius:999px;background:var(--csg-org);color:#fff;
+  font-size:var(--fs-micro);font-weight:700;line-height:1.45;letter-spacing:-0.02em;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
+.contents_div .csg-cta .csg-ar{font-size:var(--fs-h3);color:#fff}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-cta:hover{background:#D8541A;box-shadow:0 8px 18px rgba(242,107,39,.32)}
+}
+.contents_div .csg-cta:active{background:#C64B15}
+.contents_div .csg-cta:focus-visible{outline:3px solid var(--csg-navy);outline-offset:3px}
+.contents_div .csg-cta--tight{margin-top:16px}
+.contents_div .csg-cta--navy{background:var(--csg-navy)}
+.contents_div .csg-cta--wide{margin:34px auto 0;display:flex;width:100%;max-width:420px;
+  justify-content:center;min-height:56px;padding:14px 26px;border-radius:16px;
+  font-size:var(--fs-h3);letter-spacing:-0.01em}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-cta--navy:hover{background:var(--csg-navy-d);box-shadow:0 8px 18px rgba(69,102,156,.32)}
+}
+.contents_div .csg-cta--navy:active{background:var(--csg-navy-x)}
+
+/* ===== S2 deco : 헤더 주변 오브젝트 ===== */
+.contents_div .csg-deco{position:absolute;top:0;left:clamp(16px,6.25%,50px);right:clamp(16px,6.25%,50px);
+  height:0;pointer-events:none;user-select:none}
+@keyframes csg-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-9px,0)}}
+@keyframes csg-sway{0%,100%{transform:translate3d(0,0,0) rotate(-4deg)}50%{transform:translate3d(0,-7px,0) rotate(4deg)}}
+.contents_div .csg-dc{position:absolute;display:block;height:auto;
+  filter:drop-shadow(0 3px 5px rgba(122,96,44,.20));
+  animation:csg-float 4.6s ease-in-out infinite}
+.contents_div .csg-dc--ginkgo{animation:csg-sway 5.2s ease-in-out infinite;animation-delay:-.8s}
+.contents_div .csg-dc--maple{animation:csg-sway 4.6s ease-in-out infinite;animation-delay:-2.6s}
+.contents_div .csg-dc--yakgwa{animation-duration:4.9s;animation-delay:-1.6s}
+.contents_div .csg-dc--apple{animation-duration:4.2s;animation-delay:-.4s}
+.contents_div .csg-dc--pear{animation-duration:5.1s;animation-delay:-2.2s}
+.contents_div .csg-dc--gift{animation-duration:5.6s;animation-delay:-1.2s}
+/* 선물 모음집 꾸밈 이미지 — 폭 800px 기준 크기·위치, 800→350px 동안 같은 비율로 줄어듦(350px에서 43.75%)
+   은행잎·굴비·배·보자기는 폭이 줄수록 추가로 아래로(800 0 → 601 12px) */
+.contents_div .csg-dc--ginkgo{left:-15px;top:110px;width:40px;left:clamp(-15px,-1.875cqi,-6.5625px);top:calc(clamp(48.125px,13.75cqi,110px) + clamp(0px,calc(48.24px - 6.030cqi),12px));width:clamp(17.5px,5cqi,40px)}
+.contents_div .csg-dc--yakgwa{left:51px;top:156px;width:74.9px;left:clamp(22.3125px,6.375cqi,51px);top:calc(clamp(68.25px,19.5cqi,156px) + clamp(0px,calc(48.24px - 6.030cqi),12px));width:clamp(32.7688px,9.3625cqi,74.9px)}
+.contents_div .csg-dc--apple{left:128px;top:85px;width:41px;left:clamp(56px,16cqi,128px);top:clamp(37.1875px,10.625cqi,85px);width:clamp(17.9375px,5.125cqi,41px)}
+.contents_div .csg-dc--pear{right:120px;top:88px;width:59px;right:clamp(52.5px,15cqi,120px);top:calc(clamp(38.5px,11cqi,88px) + clamp(0px,calc(48.24px - 6.030cqi),12px));width:clamp(25.8125px,7.375cqi,59px)}
+.contents_div .csg-dc--gift{right:37px;top:155px;width:68px;right:clamp(16.1875px,4.625cqi,37px);top:calc(clamp(67.8125px,19.375cqi,155px) + clamp(0px,calc(48.24px - 6.030cqi),12px));width:clamp(29.75px,8.5cqi,68px)}
+.contents_div .csg-dc--maple{right:-9px;top:81px;width:41px;right:clamp(-9px,-1.125cqi,-3.9375px);top:clamp(35.4375px,10.125cqi,81px);width:clamp(17.9375px,5.125cqi,41px)}
+
+/* ===== S2 : 선물 모음집 — 단일 패널 안 2단 색인 ===== */
+.contents_div .csg-panel{margin-top:48px;padding:34px 32px 12px;border-radius:28px;background:#FFFDF4;
+  border:2px solid var(--csg-line);box-shadow:0 8px 26px rgba(120,96,40,.07)}
+.contents_div .csg-cats{column-count:2;column-gap:34px;column-rule:1px solid #F2E6CB}
+.contents_div .csg-cat{display:inline-block;width:100%;vertical-align:top;
+  break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 26px}
+.contents_div .csg-cat-h{display:flex;align-items:flex-start;gap:10px;font-size:var(--fs-h3);
+  font-weight:800;line-height:1.45;color:var(--csg-navy-x)}
+.contents_div .csg-cat-h .csg-num{margin-top:calc((var(--fs-h3) * 1.45 - var(--num-sz)) / 2)}
+.contents_div .csg-cat-t{overflow-wrap:break-word}
+.contents_div .csg-gifts{display:grid;margin-top:12px;border-top:2px solid var(--csg-line)}
+.contents_div .csg-gift+.csg-gift{border-top:1px dashed #EDE2CB}
+.contents_div .csg-gift-a{display:grid;grid-template-columns:auto 1fr;gap:14px;
+  align-items:center;padding:12px 4px;border-radius:14px;
+  transition:background .16s ease}
+.contents_div .csg-fig{position:relative;display:block;width:64px;border-radius:12px;
+  overflow:hidden;background:#eee;border:1px solid rgba(122,96,44,.16)}
+.contents_div .csg-fig::before{content:'';display:block;padding-top:100%}
+.contents_div .csg-fig img{position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center}
+.contents_div .csg-zoom{position:fixed;inset:0;z-index:60;display:none;pointer-events:none}
+.contents_div .csg-zoom.is-on{display:block}
+.contents_div .csg-zoom img{position:absolute;display:block;border-radius:16px;
+  border:1px solid rgba(122,96,44,.16);background:#fff;object-fit:cover;
+  opacity:0;transform:translate(-50%,-50%) scale(.92);
+  transition:opacity .16s ease,transform .16s ease}
+.contents_div .csg-zoom.is-on img{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.contents_div .csg-gift-t{display:grid;gap:6px;min-width:0}
+.contents_div .csg-gift-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.contents_div .csg-lb{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+  height:var(--cap-h);padding:0 var(--cap-px);border-radius:999px;
+  font-size:var(--cap-fs);font-weight:var(--cap-fw);line-height:1;white-space:nowrap}
+.contents_div .csg-rg{background:#EAF0F9;color:var(--csg-navy-d)}
+.contents_div .csg-nm{font-size:var(--fs-micro);font-weight:500;line-height:1.5;color:var(--csg-ink)}
+.contents_div .csg-pt{font-family:'GmarketSansBold','Pretendard',sans-serif;font-size:var(--fs-micro);
+  line-height:1.6;color:var(--csg-gold-d);white-space:nowrap}
+.contents_div .csg-pt b{font-weight:400;font-size:.86em;margin-left:1px}
+.contents_div .csg-pt-n{color:#B6A88A}
+.contents_div .csg-ar{flex:0 0 auto;font-family:'GmarketSansBold','Pretendard',sans-serif;
+  font-size:var(--fs-h3);line-height:1;color:var(--csg-org)}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-gift-a:hover{background:#FFF7E4}
+  .contents_div .csg-gift-a:hover .csg-nm{color:var(--csg-org)}
+}
+.contents_div .csg-gift-a:active{background:#FFF1D4}
+.contents_div .csg-gift-a:focus-visible{outline:3px solid var(--csg-navy);outline-offset:1px}
+
+/* ===== S5 : 추석 이벤트 — 자유 폭 캡슐 ===== */
+.contents_div .csg-evs{margin-top:48px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.contents_div .csg-ev-a{display:inline-flex;align-items:center;gap:12px;text-align:left;
+  min-height:48px;padding:12px 20px;border-radius:999px;background:#FFFDF4;
+  border:2px solid var(--csg-line);transition:border-color .16s ease,background .16s ease}
+.contents_div .csg-ev-t{font-size:var(--fs-micro);font-weight:600;line-height:1.5;color:var(--csg-ink)}
+.contents_div .csg-evr{color:var(--csg-org);font-weight:700}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-ev-a:hover{background:#FFFDF4;border-color:var(--csg-org)}
+  .contents_div .csg-ev-a:hover .csg-ev-t{color:var(--csg-org)}
+}
+.contents_div .csg-ev-a:active{background:#FFF1D4}
+.contents_div .csg-ev-a:focus-visible{outline:3px solid var(--csg-navy);outline-offset:1px}
+
+/* ===== S3 : 특별시 추천 — 대형 숫자 + 괘선 ===== */
+.contents_div .csg-picks{margin-top:48px}
+.contents_div .csg-pk{display:grid;grid-template-columns:auto 1fr;gap:28px;
+  padding:30px 0;border-top:2px solid var(--csg-line)}
+.contents_div .csg-pk:last-child{border-bottom:2px solid var(--csg-line)}
+.contents_div .csg-pk-n{font-family:'GmarketSansBold','Paperozi','Pretendard',sans-serif;
+  font-size:46px;line-height:.9;color:var(--csg-gold);letter-spacing:-0.03em}
+.contents_div .csg-pick-h{font-size:var(--fs-h3);font-weight:800;line-height:1.45;color:var(--csg-navy-x)}
+.contents_div .csg-pick-b{margin-top:12px;font-size:var(--fs-body);line-height:1.6;color:var(--csg-ink)}
+.contents_div .csg-pick-b+.csg-pick-b{margin-top:10px}
+.contents_div .csg-note{margin-top:14px;font-size:var(--fs-cap);line-height:1.6;color:var(--csg-ink2)}
+.contents_div .csg-lk{color:var(--csg-navy);font-weight:700;
+  text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+  text-decoration-color:rgba(47,86,155,.45);transition:color .16s ease,text-decoration-color .16s ease}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-lk:hover{color:var(--csg-org);text-decoration-color:var(--csg-org)}
+}
+.contents_div .csg-lk:focus-visible{outline:3px solid var(--csg-org);outline-offset:2px;border-radius:3px}
+.contents_div .csg-sublead{margin-top:20px;display:flex;align-items:center;gap:8px;
+  font-size:var(--fs-micro);font-weight:700;line-height:1.4;color:var(--csg-gold-d)}
+.contents_div .csg-dia{flex:0 0 auto;width:9px;height:9px;border-radius:2px;
+  background:var(--csg-gold-d);transform:rotate(45deg)}
+.contents_div .csg-rices{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.contents_div .csg-rice{display:inline-block;padding:7px 13px;border-radius:999px;
+  background:#FFF4DC;color:#8A6412;border:1px solid #F0DFB4;
+  font-size:var(--fs-tag);font-weight:600;line-height:1.35;
+  transition:background .16s ease,border-color .16s ease,color .16s ease}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-rice:hover{background:#fff;border-color:var(--csg-org);color:var(--csg-org)}
+}
+.contents_div .csg-rice:active{background:#FFEBC8}
+.contents_div .csg-rice:focus-visible{outline:3px solid var(--csg-navy);outline-offset:2px}
+
+/* 픽 이미지 / 슬라이드 */
+.contents_div .csg-pkfig{position:relative;display:block;width:100%;overflow:hidden;
+  border-radius:14px;background:#eee;border:1px solid rgba(122,96,44,.16)}
+.contents_div .csg-pkfig::before{content:'';display:block;padding-top:75%}
+.contents_div .csg-pkfig img{position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center}
+.contents_div .csg-sl{position:relative;width:100%}
+.contents_div .csg-sl-win{position:relative;overflow:hidden;border-radius:14px;touch-action:pan-y}
+.contents_div .csg-sl-track{display:flex;transition:transform .42s cubic-bezier(.4,0,.2,1)}
+.contents_div .csg-sl-track>li{flex:0 0 100%;min-width:0}
+.contents_div .csg-sl-track .csg-pkfig{border-radius:0;border:0}
+.contents_div .csg-sl-b{position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:32.3px;height:32.3px;padding:0;border:0;border-radius:999px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;line-height:1;
+  background:rgba(33,56,105,.62);color:#fff;transition:background .16s ease}
+.contents_div .csg-sl-b svg{display:block;width:18px;height:18px}
+.contents_div .csg-sl-prev{left:8px}
+.contents_div .csg-sl-next{right:8px}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .csg-sl-b:hover{background:var(--csg-org)}
+}
+.contents_div .csg-sl-b:focus-visible{outline:3px solid var(--csg-org);outline-offset:2px}
+.contents_div .csg-sl-dots{display:none;justify-content:center;flex-wrap:wrap;gap:0 6px;margin-top:8px}
+/* 점 간격 6px — 버튼 폭 = 점 폭(활성 14px), 높이 18px로 누르는 영역 확보 */
+.contents_div .csg-sl-dot{position:relative;display:block;flex:0 0 auto;width:6px;height:18px;margin:0;padding:0;
+  border:0;border-radius:999px;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:width .2s ease}
+.contents_div .csg-sl-dot::before{content:'';position:absolute;left:0;right:0;top:50%;height:6px;
+  border-radius:999px;transform:translateY(-50%);background:rgba(33,56,105,.22);
+  transition:background-color .2s ease}
+.contents_div .csg-sl-dot.is-on{width:14px}
+.contents_div .csg-sl-dot.is-on::before{background:var(--csg-navy)}
+.contents_div .csg-sl-dot:focus-visible{outline:2px solid var(--csg-org);outline-offset:0}
+.contents_div .csg-sl-cap{margin-top:9px;padding-right:4px;display:flex;align-items:baseline;
+  justify-content:flex-end;gap:6px;
+  font-size:var(--fs-cap);line-height:1.4;color:var(--csg-ink3)}
+.contents_div .csg-sl-nm{font-weight:700;color:var(--csg-navy-x)}
+.contents_div .csg-pk-x{grid-column:2 / -1;margin-top:-36px}
+/* 이미지·슬라이드는 .csg-pk-c 안(제목 뒤)에 있음 — 웹은 본문|이미지 두 칸 */
+.contents_div .csg-pk-c{display:grid;grid-template-columns:1fr 232px;grid-template-rows:auto auto 1fr;
+  column-gap:28px;align-items:start}
+.contents_div .csg-pk-c>*{grid-column:1}
+.contents_div .csg-pk-c>.csg-pkfig,.contents_div .csg-pk-c>.csg-sl{grid-column:2;grid-row:1 / 4;align-self:stretch}
+.contents_div .csg-pk-x .csg-sublead{margin-top:0}
+
+/* ===== S4 : 할인 기획전 — 괘선 정의 리스트 ===== */
+/* S4 히어로 — 토끼 + 리드문 + 쿠폰 */
+/* 660 이하(데스크톱 배치): 토끼 칸·간격을 폭에 비례해 줄여 리드문 3줄 유지(리드문 최소 폭 336px)
+   컨테이너 569→660px 동안 토끼 145→191px, 간격 12→34px — 660px 이상은 191px·34px 고정 */
+.contents_div .csg-h4{margin-top:26px;display:grid;
+  grid-template-columns:191px auto;grid-template-columns:clamp(145px,calc(50.55cqi - 142.6px),191px) auto;
+  grid-template-areas:"rab lead" "rab cpn";
+  column-gap:34px;column-gap:clamp(12px,calc(24.18cqi - 125.6px),34px);row-gap:18px;
+  align-items:end;justify-content:center;
+  min-height:342px} /* 토끼가 작아져도 191px일 때 높이 유지 → 제목·리드문·쿠폰 간격 고정 */
+.contents_div .csg-h4-rw{grid-area:rab;position:relative;align-self:end;top:-1px;
+  width:191px;width:clamp(145px,calc(50.55cqi - 142.6px),191px)}
+.contents_div .csg-h4-rab{display:block;width:100%;height:auto}
+.contents_div .csg-h4-lead{grid-area:lead;margin:0;max-width:430px;text-align:left;
+  justify-self:center;align-self:end;position:relative;top:-35px}
+.contents_div .csg-h4-cpn{grid-area:cpn;width:299.3px;height:179.6px;justify-self:center;
+  align-self:end;position:relative;top:-41px;
+  animation:csg-float 3.8s ease-in-out infinite;will-change:transform}
+.contents_div .csg-h4{position:relative;z-index:1}
+.contents_div .csg-h4s{position:absolute;z-index:3;pointer-events:none;aspect-ratio:1;
+  background:linear-gradient(180deg,#FFE888 0%,#FBC22F 100%);
+  clip-path:polygon(50% 0%,59% 41%,100% 50%,59% 59%,50% 100%,41% 59%,0% 50%,41% 41%);
+  filter:drop-shadow(0 0 3px rgba(255,255,255,.9))}
+.contents_div .csg-h4s--a{left:-14.66%;bottom:38.3%;width:12.04%}
+.contents_div .csg-h4s--b{left:96.34%;bottom:41.2%;width:8.9%}
+.contents_div .csg-h4s--c{left:0.04%;bottom:47.7%;width:5.76%}
+/* 웹: 토끼·쿠폰·정보 카드 14px 아래로 (토끼 -15→-1, 쿠폰 -55→-41, 카드 -90→-76) */
+.contents_div .csg-h4 + .csg-info{margin-top:-76px;position:relative;z-index:2;
+  background:var(--csg-cream3);border:2px solid var(--csg-line);border-radius:22px;
+  padding:10px 26px;box-shadow:0 8px 26px rgba(120,96,40,.07)}
+.contents_div .csg-h4 + .csg-info .csg-dl{margin-top:0;position:relative;border-top:0}
+.contents_div .csg-h4 + .csg-info .csg-dl>li{border-bottom:0}
+/* 할인품목·할인내용 — 웹부터 위아래로 쌓고 항목 사이 가로선 */
+.contents_div .csg-h4 + .csg-info .csg-dl>li+li{border-top:1px solid #EBDDBD}
+.contents_div .csg-info{margin-top:48px}
+.contents_div .csg-info-h{font-size:var(--fs-h3);
+  font-weight:800;line-height:1.45;color:var(--csg-navy-x)}
+.contents_div .csg-dl{margin-top:20px;display:grid;grid-template-columns:1fr;
+  border-top:2px solid #E6D5AE}
+.contents_div .csg-dl>li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+  padding:15px 2px;border-bottom:1px solid #EBDDBD}
+.contents_div .csg-dl .csg-lb{background:var(--csg-navy);color:var(--csg-moon);margin-top:2px}
+.contents_div .csg-dl p{font-size:16px;line-height:1.6;color:var(--csg-ink)}
+
+/* ===== Footer ===== */
+.contents_div .csg-foot{position:relative;width:100%;
+  padding:calc(13.83% + 28px) clamp(16px,6.25%,50px) calc(var(--band) - 18px);
+  background:#3D2B1D;
+  background-image:linear-gradient(180deg,#241810 0%,#382718 32%,#4E3722 100%);
+  color:var(--csg-cream);text-align:center}
+/* 지붕 아래 벽돌 — 좌우에 드문드문 */
+.contents_div .csg-foot>*{position:relative;z-index:1}
+/* --bk: 벽돌 배율 — 웹 1, 모바일은 600부터 8단계로 줄어듦(아래 브레이크포인트) */
+.contents_div .csg-foot{--bk:1;--bk-mid:.34;--bk-sx:0px;--bk-dy:0px} /* --bk-mid: 오른쪽 가운데 벽돌 투명도 / --bk-sx: 바깥쪽으로 미는 거리 / --bk-dy: 아래로 내리는 거리 */
+.contents_div .csg-foot::before,.contents_div .csg-foot::after{content:'';position:absolute;
+  z-index:0;width:calc(78px * var(--bk));height:calc(25px * var(--bk));
+  border-radius:calc(5px * var(--bk));pointer-events:none;
+  background:rgba(158,130,92,.42)}
+.contents_div .csg-foot::before{left:calc(22px * var(--bk) - var(--bk-sx));top:calc(152px * var(--bk) + var(--bk-dy));
+  box-shadow:calc(57px * var(--bk)) calc(-37px * var(--bk)) 0 rgba(158,130,92,.28)}
+.contents_div .csg-foot::after{right:calc(22px * var(--bk) - var(--bk-sx));top:calc(170px * var(--bk) + var(--bk-dy));
+  box-shadow:calc(-84px * var(--bk)) 0 0 rgba(158,130,92,var(--bk-mid)),
+    calc(-42px * var(--bk)) calc(-44px * var(--bk)) 0 rgba(158,130,92,.24)}
+.contents_div .csg-foot-t{font-size:var(--fs-foot);font-weight:800;line-height:1.4;
+  letter-spacing:-0.01em;color:var(--csg-cream)}
+.contents_div .csg-foot-t em{font-style:normal;color:var(--csg-yl)}
+.contents_div .csg-foot-p{margin-top:0;font-size:var(--fs-lead);line-height:1.6;color:#D6C3A2}
+.contents_div .csg-hash{margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,248,230,.20);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.contents_div .csg-tag{padding:0;border:0;background:transparent;
+  color:#8B7A64;font-size:var(--fs-hash);font-weight:400;line-height:1.35}
+.contents_div .csg-foot .csg-cta--wide{margin-top:24px}
+
+/* ===== SR only ===== */
+.contents_div .csg-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ===== Breakpoints : @media ===== */
+@media (max-width:820px){
+  .contents_div .csg-doc{--fs-h2:29px;--fs-foot:31px;--gut:38px;--band:58px;--cd-py:28px;--cd-px:24px}
+  .contents_div .csg-doc .csg-knot{top:-8px;right:39px;width:46px;height:178px}
+}
+@media (max-width:780px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:157px;--rab-h:298px;--rab-right:25px;--rab-cut:85px}
+  .contents_div .csg-doc .csg-knot{top:-8px;right:36px;width:43px;height:167px}
+}
+@media (max-width:750px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:148px;--rab-h:281px;--rab-right:25px;--rab-cut:80px}
+}
+@media (max-width:725px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:139px;--rab-h:264px;--rab-right:25px;--rab-cut:75px}
+}
+@media (max-width:700px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:130px;--rab-h:247px;--rab-right:16px;--rab-cut:71px}
+  .contents_div .csg-doc .csg-h1-br{display:block}
+  .contents_div .csg-doc .csg-knot{top:-7px;right:33px;width:38px;height:147px}
+  /* ===== 추석선물 추천 — 700 이하: 이미지를 오른쪽에 띄우고 본문이 둘러 흐름 ===== */
+  .contents_div .csg-doc .csg-pk{display:block}
+  /* 번호는 왼쪽에 띄우고, 제목은 옆에서 두 줄이 돼도 들여쓰기 유지 */
+  .contents_div .csg-doc .csg-pk-n{float:left;font-size:34px;min-width:1.32em;margin-right:10px}
+  .contents_div .csg-doc .csg-pick-h{display:flow-root}
+  .contents_div .csg-doc .csg-pk-c{display:block}
+  .contents_div .csg-doc .csg-pk-c::after{content:'';display:table;clear:both}
+  .contents_div .csg-doc .csg-pick-b{clear:left}
+  /* 이미지 폭: 700px 232 → 360px 120 → 320px 110 / 본문과 간격 20px(450 이하 14px)
+     본문이 이미지보다 길면 이미지 아래로 전체 폭 사용 */
+  .contents_div .csg-doc .csg-pk-c>.csg-pkfig,
+  .contents_div .csg-doc .csg-pk-c>.csg-sl{float:right;clear:left;max-width:none;
+    width:120px;width:clamp(110px,calc(35cqi - 6px),232px);
+    margin:14px 0 10px 20px}
+  /* 이미지 프레임 — 화면 490px부터 점점 세로형, 420px 이하 5:5.6(미리보기 기준)
+     높이 = 4:3 높이와 5:5.6 높이 사이를 폭에 따라 이어 붙인 값 */
+  .contents_div .csg-doc .csg-pkfig{height:min(174px,max(calc(26.25cqi - 4.5px),min(max(calc(39.2cqi - 6.72px),123.2px),calc(310px - 42.43cqi))))}
+  .contents_div .csg-doc .csg-pkfig::before{display:none}
+  .contents_div .csg-doc .csg-sl .csg-pkfig{margin-top:0}
+  .contents_div .csg-doc .csg-pk-c>.csg-note{margin-top:14px}
+  .contents_div .csg-doc .csg-pk-x{margin-top:-16px} /* 20px에서 36px 위로 */
+  /* 슬라이드 — 페이지네이션 숨기고, '1 / 10' 표시만 이미지 안 오른쪽 아래에 겹침(브랜드명은 숨김) */
+  .contents_div .csg-doc .csg-sl-dots{display:none}
+  .contents_div .csg-doc .csg-sl-cap{position:absolute;right:6px;bottom:6px;z-index:3;margin:0;
+    padding:2px 7px;gap:3px;border-radius:999px;background:rgba(20,32,60,.55);
+    font-size:10px;line-height:1.4;color:#fff;align-items:center;pointer-events:none}
+  .contents_div .csg-doc .csg-sl-nm{display:none}
+  /* 브랜드 쌀 배지 — 중앙정렬, 간격 5px */
+  .contents_div .csg-doc .csg-rices{justify-content:center;gap:5px}
+  /* 브랜드 쌀 클릭 안내문 — 숨김 */
+  .contents_div .csg-doc .csg-pk-x .csg-note{display:none}
+  /* 브랜드 쌀 슬라이드 — 좌우 버튼 숨김(넘김은 스와이프·자동) */
+  .contents_div .csg-doc .csg-sl-b{display:none}
+}
+@media (max-width:675px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:121px;--rab-h:230px;--rab-right:16px;--rab-cut:66px}
+}
+@media (max-width:657px){
+  /* ===== 할인 기획전 — 657 이하: 리드문 위 가운데, 토끼·쿠폰은 아래 가운데 묶음 =====
+     컨테이너 657→360px 동안 모든 크기·간격이 비례로 줄어 600 경계에서 끊기지 않음 */
+  .contents_div .csg-doc .csg-h4{min-height:0;column-gap:0;
+    margin-top:16px; /* 제목–리드문 간격: 다른 섹션 리드문(margin-top 16px)과 통일 */
+    grid-template-areas:"lead lead lead lead lead" ". rab . cpn .";
+    grid-template-columns:minmax(0,1fr) 104px 6px 172px minmax(0,1fr);
+    grid-template-columns:minmax(0,1fr) clamp(104px,calc(28.79cqi + 0.4px),191px)
+      clamp(6px,calc(9.09cqi - 26.7px),34px) clamp(172px,calc(42.76cqi + 18.1px),299.3px) minmax(0,1fr);
+    row-gap:10px;row-gap:clamp(10px,calc(2.69cqi + 0.3px),18px)}
+  .contents_div .csg-doc .csg-h4-lead{top:0;justify-self:center;text-align:center}
+  /* 토끼 104→191px */
+  .contents_div .csg-doc .csg-h4-rw{top:0;width:104px;width:clamp(104px,calc(28.79cqi + 0.4px),191px)}
+  /* 쿠폰 172→299px, 비율 유지 */
+  .contents_div .csg-doc .csg-h4-cpn{height:auto;max-width:none;
+    width:172px;width:clamp(172px,calc(42.76cqi + 18.1px),299.3px);
+    top:-40px;top:clamp(-41px,calc(-0.34cqi - 38.8px),-40px)}
+  /* 정보 카드 — 겹침 -52→-76px, 좌우 여백 17→26px, 모서리 16→22px */
+  .contents_div .csg-doc .csg-h4 + .csg-info{
+    margin-top:-52px;margin-top:clamp(-76px,calc(-8.08cqi - 22.9px),-52px);
+    padding:10px 17px;padding:10px clamp(17px,calc(3.03cqi + 6.1px),26px);
+    /* 위아래 여백: 화면 폭 573px 10px → 370px 0 */
+    padding-top:clamp(0px,calc(4.926vw - 18.23px),10px);padding-bottom:clamp(0px,calc(4.926vw - 18.23px),10px);
+    border-radius:16px;border-radius:clamp(16px,calc(2.02cqi + 8.7px),22px)}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl{margin-top:0}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl>li{
+    padding:13px 2px;padding:clamp(13px,calc(0.67cqi + 10.6px),15px) 2px;
+    gap:11px;gap:clamp(11px,calc(1.01cqi + 7.4px),14px)}
+  /* 카드 글자 13→16px, 라벨 캡슐 높이 17→24 · 좌우 7→11 · 글자 10→13px */
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl p{font-size:13px;font-size:clamp(13px,calc(1.01cqi + 9.36px),16px)}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-lb{
+    height:17px;height:clamp(17px,calc(2.357cqi + 8.5px),24px);
+    padding:0 7px;padding:0 clamp(7px,calc(1.347cqi + 2.15px),11px);
+    font-size:10px;font-size:clamp(10px,calc(1.01cqi + 6.36px),13px)}
+}
+@media (max-width:650px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:112px;--rab-h:213px;--rab-right:16px;--rab-cut:61px}
+}
+@media (max-width:625px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:104px;--rab-h:198px;--rab-right:16px;--rab-cut:56px}
+}
+@media (max-width:600px){
+  /* 푸터 벽돌 2단계 ×0.76 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.76}
+  .contents_div .csg-doc{
+    --fs-h2:22px;--fs-foot:21px;--fs-h3:17px;--fs-kicker:10px;--fs-num:9.5px;
+    --fs-body:14px;--fs-lead:13.5px;--fs-nav:12px;--fs-tag:11px;--fs-micro:10px;
+    --fs-cap:10px;--fs-note:10px;--fs-hash:11px;
+    --gut:20px;--band:44px;--kick:22px;
+    --cap-h:17px;--cap-px:7px;--cap-fs:10px;--cap-fw:400;
+    --cd-py:22px;--cd-px:17px;
+    line-height:1.6}
+  .contents_div .csg-doc .csg-nm{font-size:13.5px}
+  .contents_div .csg-doc .csg-ev-t{font-size:13.5px}
+  .contents_div .csg-doc .csg-pt{font-size:12px}
+  .contents_div .csg-doc .csg-dl p{font-size:13.5px}
+  .contents_div .csg-doc .csg-onum>li>strong{font-size:14px}
+  .contents_div .csg-doc .csg-sub{margin-top:0}
+  .contents_div .csg-doc .csg-sub>li{font-size:13.5px}
+  .contents_div .csg-doc .csg-cta{font-size:14px;padding:11px 18px;margin-top:22px}
+  .contents_div .csg-doc .csg-cta--wide{min-height:52px;padding:15px 18px;
+    border-radius:13px;font-size:15px;margin-top:26px}
+  .contents_div .csg-doc .csg-sublead{font-size:13.5px}
+  .contents_div .csg-doc{--num-sz:20px}
+  .contents_div .csg-doc .csg-intro{padding:30px clamp(16px,6.25%,50px)}
+  .contents_div .csg-doc .csg-sec{padding-top:50px;padding-bottom:50px}
+  .contents_div .csg-doc .csg-sec[data-sec="s5"]{padding-bottom:84px}
+  /* 추석 이벤트 — 키커 위 여백 50 → 43px */
+  .contents_div .csg-doc .csg-sec[data-sec="s5"]{padding-top:43px}
+  .contents_div .csg-doc .csg-intro-p{margin-top:18px;padding-left:10px;padding-right:10px}
+  .contents_div .csg-doc .csg-frame{--fr1:3px;--fr2:9px;--fr3:15px;--frs:7px;
+    padding:44px 24px 47px;border-width:8px;border-radius:4px}
+  .contents_div .csg-doc .csg-frame::before{border-radius:3px}
+  .contents_div .csg-doc .csg-knot{top:-6px;right:29px;width:31px;height:120px}
+  .contents_div .csg-doc .csg-nav-btn{min-height:60px;padding:6px 3px;font-weight:500}
+  .contents_div .csg-doc .csg-nav-btn+.csg-nav-btn::before{height:18px;margin-top:-9px}
+  .contents_div .csg-doc .csg-band4{width:168px;height:6px}
+  .contents_div .csg-doc .csg-cloud--a{top:26px;right:-4px;width:89.6px}
+  .contents_div .csg-doc .csg-cloud--b{top:38px;left:-4px;width:68.8px}
+  /* 리드문 아래 간격 — 모바일 전 섹션 20px 통일 */
+  .contents_div .csg-doc .csg-defs{margin-top:20px;grid-template-columns:1fr;gap:22px}
+  .contents_div .csg-doc .csg-def{padding-left:13px;border-left-width:2px}
+  .contents_div .csg-doc .csg-benefit{margin-top:24px}
+  .contents_div .csg-doc .csg-way{margin-top:24px;flex-wrap:wrap;
+    gap:20px;padding:12px 16px;border-radius:999px}
+  .contents_div .csg-doc .csg-way .csg-cta{margin-top:0}
+  .contents_div .csg-doc .csg-why>.csg-def-h{position:relative;z-index:1}
+  .contents_div .csg-doc .csg-why{margin-top:24px;border-radius:18px}
+  .contents_div .csg-doc .csg-why-rows{margin-top:14px;gap:10px;
+    --rab-w:96px;--rab-h:183px;--rab-right:23px;--rab-cut:51px}
+  .contents_div .csg-doc .csg-why-row{padding:12px 13px;border-radius:12px}
+  .contents_div .csg-doc .csg-why-cap{margin-top:16px}
+  .contents_div .csg-doc .csg-why-sum{padding:12px 14px;border-radius:12px}
+  .contents_div .csg-doc .csg-panel{margin-top:20px;padding:22px 17px 4px;border-radius:20px}
+  .contents_div .csg-doc .csg-cats{column-count:1;column-rule:none}
+  .contents_div .csg-doc .csg-cat{margin-bottom:20px}
+  .contents_div .csg-doc .csg-dc{filter:drop-shadow(0 2px 3px rgba(122,96,44,.20))}
+  /* 선물 모음집 꾸밈 이미지 — 600 이하: 크기·좌우 위치는 800 기준 비례 축소를 계속 이어가고,
+     세로는 문구가 30px 올라간 만큼 올린 뒤 각 이미지 가운데 높이를 고정(작아지면 제자리에서 줄어듦) */
+  .contents_div .csg-doc .csg-dc--ginkgo{top:calc(79.84px - 2.5575cqi)}
+  .contents_div .csg-doc .csg-dc--yakgwa{top:calc(124.28px - 4.2131cqi)}
+  .contents_div .csg-doc .csg-dc--apple{top:calc(49.12px - 2.5625cqi)}
+  .contents_div .csg-doc .csg-dc--pear{top:calc(66.69px - 3.1158cqi)}
+  .contents_div .csg-doc .csg-dc--gift{top:calc(125.89px - 4.6063cqi)}
+  .contents_div .csg-doc .csg-dc--maple{top:calc(44.08px - 2.2208cqi)}
+  .contents_div .csg-doc .csg-evs{margin-top:20px;gap:6px;
+    flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start}
+  .contents_div .csg-doc .csg-picks{margin-top:34px}
+  /* 특별시 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
+  .contents_div .csg-doc .csg-pk{padding:22px 0}
+  .contents_div .csg-doc .csg-pk-n{font-size:26px}
+  /* 키커 캡슐 — 10px 글자는 광학 중심이 위로 떠 보여 윗여백 보정 */
+  .contents_div .csg-doc .csg-kick{padding-top:0.27em}
+  .contents_div .csg-doc .csg-info{margin-top:34px}
+  .contents_div .csg-doc .csg-h4s--b{display:none}
+  /* 웹에서 준 상대 이동값은 모바일에서 해제 — 1열로 쌓이면 기준이 달라진다 */
+  /* 등불 — 좁은 폭에서는 더 낮게 */
+  /* 왼쪽 등불 — 폭 31%로 줄다가 136px(미리보기 470px 시점 크기)에서 멈춤, 위치 46 → 6px(40px 아래로) */
+  .contents_div .csg-doc .csg-lan--a{bottom:6px;width:31%;width:max(31%,136px)}
+  /* 오른쪽 등불 — 위치 26 → 6px(20px 아래로) */
+  .contents_div .csg-doc .csg-lan--b{bottom:6px;width:21%}
+  .contents_div .csg-doc .csg-hash{margin-top:34px;padding-top:26px}
+  .contents_div .csg-doc .csg-benefit{border-radius:18px}
+  .contents_div .csg-doc .csg-gift-a{gap:11px;padding:10px 2px;border-radius:12px}
+  .contents_div .csg-doc .csg-fig{width:67.2px;border-radius:10px}
+  .contents_div .csg-doc .csg-gift-t{gap:5px}
+  .contents_div .csg-doc .csg-cta .csg-ar{font-size:15px}
+  .contents_div .csg-doc .csg-ev-a{display:flex;width:100%;justify-content:space-between;
+    min-height:40px;padding:9px 18px;gap:8px}
+  .contents_div .csg-doc .csg-ev-t{flex:1 1 auto;font-size:12.5px;line-height:1.4}
+  .contents_div .csg-doc .csg-ev-a .csg-ar{font-size:14px}
+  .contents_div .csg-doc .csg-ev-a .csg-ar{font-size:15px}
+  .contents_div .csg-doc .csg-rice{padding:5px 10px}
+}
+@media (max-width:540px){
+  /* 푸터 벽돌 3단계 ×0.68 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.68}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:88px;--rab-h:167px;--rab-right:23px;--rab-cut:47px}
+}
+@media (max-width:480px){
+  /* 푸터 벽돌 4단계 ×0.61 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.61}
+  .contents_div .csg-doc .csg-way{gap:10px;justify-content:space-between}
+  .contents_div .csg-doc{--fs-nav:12px}
+  .contents_div .csg-doc .csg-nav-btn{min-height:54px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:78px;--rab-h:148px;--rab-right:21px;--rab-cut:41px}
+  .contents_div .csg-doc .csg-knot{top:-5px;right:24px;width:25px;height:97px}
+}
+@media (max-width:450px){
+  /* 푸터 벽돌 5단계 ×0.55 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.55}
+  /* 추석선물 추천 — 본문·이미지 간격 20 → 14px (CMS에서도 적용되도록 선택자 한 단계 더) */
+  .contents_div .csg-doc .csg-pk .csg-pk-c>.csg-pkfig,
+  .contents_div .csg-doc .csg-pk .csg-pk-c>.csg-sl{margin-left:14px}
+  /* 섹션 제목 좌우 여백 17px 추가 */
+  .contents_div .csg-doc .csg-h2{padding-left:17px;padding-right:17px}
+  /* 리드문 좌우 여백 5px 추가 */
+  .contents_div .csg-doc .csg-lead{padding-left:5px;padding-right:5px}
+  /* 혜택-기부방법-왜좋을까 카드 사이 간격: 24px의 70% */
+  .contents_div .csg-doc .csg-way,.contents_div .csg-doc .csg-why{margin-top:16.8px}
+  /* 타이틀-본문 간격 -2px (12→10 / 18→16 / 14→12) */
+  .contents_div .csg-doc .csg-def-b{margin-top:10px}
+  .contents_div .csg-doc .csg-onum{margin-top:16px}
+  .contents_div .csg-doc .csg-why-rows{margin-top:12px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:70px;--rab-h:133px;--rab-right:21px;--rab-cut:37px}
+  .contents_div .csg-doc .csg-intro-p{padding-left:7px;padding-right:7px}
+}
+@media (max-width:435px){
+  /* 할인 기획전 제목 — '합리적으로' 뒤에서 줄바꿈 */
+  .contents_div .csg-doc .csg-h2-br--s4{display:block}
+}
+@media (max-width:425px){
+  /* 추석 이벤트 제목 — '고향사랑기부제는' 뒤에서 줄바꿈 */
+  .contents_div .csg-doc .csg-h2-br{display:block}
+}
+@media (max-width:420px){
+  /* 푸터 벽돌 6단계 ×0.49 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.49}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:64px;--rab-h:121px;--rab-right:21px;--rab-cut:34px}
+  /* 추석선물 추천 — 이미지 옆 본문 13px(420) → 최소 12.5px(320) */
+  .contents_div .csg-doc .csg-pick-b{font-size:13px;font-size:clamp(12.5px,calc(0.5vw + 10.9px),13px)}
+}
+@media (max-width:410px){
+  .contents_div .csg-doc .csg-intro,.contents_div .csg-doc .csg-sec,
+  .contents_div .csg-doc .csg-dash,.contents_div .csg-doc .csg-foot{padding-left:15px;padding-right:15px}
+  .contents_div .csg-doc .csg-deco{left:15px;right:15px}
+}
+@media (max-width:390px){
+  /* 푸터 벽돌 7단계 ×0.45 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.45}
+  .contents_div .csg-doc .csg-cloud--a{width:83.3px}
+  .contents_div .csg-doc .csg-cloud--b{width:64px}
+  .contents_div .csg-doc{
+    --fs-h2:21.5px;--fs-foot:18px;--fs-h3:16px;--fs-body:13.5px;--fs-lead:13px;--fs-nav:11px;
+    --fs-tag:10.5px;--fs-hash:10.5px;--gut:16px;--band:38px;--cd-py:19px;--cd-px:14px;
+    line-height:1.6}
+  .contents_div .csg-doc .csg-nm{font-size:13px}
+  .contents_div .csg-doc .csg-ev-t{font-size:13px}
+  .contents_div .csg-doc .csg-pt{font-size:11.5px}
+  .contents_div .csg-doc .csg-dl p{font-size:13px}
+  .contents_div .csg-doc .csg-sub>li{font-size:13px}
+  .contents_div .csg-doc .csg-cta{font-size:13.5px}
+  .contents_div .csg-doc .csg-sublead{font-size:13px}
+  .contents_div .csg-doc .csg-nav-btn{padding:6px 1px}
+  .contents_div .csg-doc .csg-nav-btn+.csg-nav-btn::before{height:16px;margin-top:-8px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:58px;--rab-h:110px;--rab-right:21px;--rab-cut:31px}
+  .contents_div .csg-doc .csg-knot{top:-4px;right:22px;width:23px;height:89px}
+}
+@media (max-width:360px){
+  /* 푸터 벽돌 8단계 ×0.41 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.41}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:52px;--rab-h:99px;--rab-right:21px;--rab-cut:28px}
+}
+@media (max-width:356px){
+  /* 토끼+별 세트 360px 대비 5% 축소 */
+  .contents_div .csg-doc .csg-why-rows{--rab-w:49.4px;--rab-h:94.05px;--rab-right:21px;--rab-cut:26.6px}
+}
+@media (max-width:340px){
+  /* 푸터 벽돌 9단계 ×0.38 */
+  .contents_div .csg-doc footer.csg-foot{--bk:0.38;--bk-mid:0} /* 가장 좁은 폭 — 문구와 너무 가까운 오른쪽 가운데 벽돌 숨김 */
+  .contents_div .csg-doc{--fs-nav:10px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:44px;--rab-h:83px;--rab-right:21px;--rab-cut:23px}
+  .contents_div .csg-doc .csg-knot{top:-4px;right:20px;width:21px;height:81px}
+}
+
+/* ===== Breakpoints : @container (embed) ===== */
+@container (max-width:820px){
+  .contents_div .csg-doc{--fs-h2:29px;--fs-foot:31px;--gut:38px;--band:58px;--cd-py:28px;--cd-px:24px}
+  .contents_div .csg-doc .csg-knot{top:-8px;right:39px;width:46px;height:178px}
+}
+@container (max-width:780px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:157px;--rab-h:298px;--rab-right:25px;--rab-cut:85px}
+  .contents_div .csg-doc .csg-knot{top:-8px;right:36px;width:43px;height:167px}
+}
+@container (max-width:750px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:148px;--rab-h:281px;--rab-right:25px;--rab-cut:80px}
+}
+@container (max-width:725px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:139px;--rab-h:264px;--rab-right:25px;--rab-cut:75px}
+}
+@container (max-width:668px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:130px;--rab-h:247px;--rab-right:16px;--rab-cut:71px}
+  .contents_div .csg-doc .csg-h1-br{display:block}
+  .contents_div .csg-doc .csg-knot{top:-7px;right:33px;width:38px;height:147px}
+  /* ===== 추석선물 추천 — 700 이하: 이미지를 오른쪽에 띄우고 본문이 둘러 흐름 ===== */
+  .contents_div .csg-doc .csg-pk{display:block}
+  /* 번호는 왼쪽에 띄우고, 제목은 옆에서 두 줄이 돼도 들여쓰기 유지 */
+  .contents_div .csg-doc .csg-pk-n{float:left;font-size:34px;min-width:1.32em;margin-right:10px}
+  .contents_div .csg-doc .csg-pick-h{display:flow-root}
+  .contents_div .csg-doc .csg-pk-c{display:block}
+  .contents_div .csg-doc .csg-pk-c::after{content:'';display:table;clear:both}
+  .contents_div .csg-doc .csg-pick-b{clear:left}
+  /* 이미지 폭: 700px 232 → 360px 120 → 320px 110 / 본문과 간격 20px(450 이하 14px)
+     본문이 이미지보다 길면 이미지 아래로 전체 폭 사용 */
+  .contents_div .csg-doc .csg-pk-c>.csg-pkfig,
+  .contents_div .csg-doc .csg-pk-c>.csg-sl{float:right;clear:left;max-width:none;
+    width:120px;width:clamp(110px,calc(35cqi - 6px),232px);
+    margin:14px 0 10px 20px}
+  /* 이미지 프레임 — 화면 490px부터 점점 세로형, 420px 이하 5:5.6(미리보기 기준)
+     높이 = 4:3 높이와 5:5.6 높이 사이를 폭에 따라 이어 붙인 값 */
+  .contents_div .csg-doc .csg-pkfig{height:min(174px,max(calc(26.25cqi - 4.5px),min(max(calc(39.2cqi - 6.72px),123.2px),calc(310px - 42.43cqi))))}
+  .contents_div .csg-doc .csg-pkfig::before{display:none}
+  .contents_div .csg-doc .csg-sl .csg-pkfig{margin-top:0}
+  .contents_div .csg-doc .csg-pk-c>.csg-note{margin-top:14px}
+  .contents_div .csg-doc .csg-pk-x{margin-top:-16px} /* 20px에서 36px 위로 */
+  /* 슬라이드 — 페이지네이션 숨기고, '1 / 10' 표시만 이미지 안 오른쪽 아래에 겹침(브랜드명은 숨김) */
+  .contents_div .csg-doc .csg-sl-dots{display:none}
+  .contents_div .csg-doc .csg-sl-cap{position:absolute;right:6px;bottom:6px;z-index:3;margin:0;
+    padding:2px 7px;gap:3px;border-radius:999px;background:rgba(20,32,60,.55);
+    font-size:10px;line-height:1.4;color:#fff;align-items:center;pointer-events:none}
+  .contents_div .csg-doc .csg-sl-nm{display:none}
+  /* 브랜드 쌀 배지 — 중앙정렬, 간격 5px */
+  .contents_div .csg-doc .csg-rices{justify-content:center;gap:5px}
+  /* 브랜드 쌀 클릭 안내문 — 숨김 */
+  .contents_div .csg-doc .csg-pk-x .csg-note{display:none}
+  /* 브랜드 쌀 슬라이드 — 좌우 버튼 숨김(넘김은 스와이프·자동) */
+  .contents_div .csg-doc .csg-sl-b{display:none}
+}
+@container (max-width:643px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:121px;--rab-h:230px;--rab-right:16px;--rab-cut:66px}
+}
+@container (max-width:625px){
+  /* ===== 할인 기획전 — 657 이하: 리드문 위 가운데, 토끼·쿠폰은 아래 가운데 묶음 =====
+     컨테이너 657→360px 동안 모든 크기·간격이 비례로 줄어 600 경계에서 끊기지 않음 */
+  .contents_div .csg-doc .csg-h4{min-height:0;column-gap:0;
+    margin-top:16px; /* 제목–리드문 간격: 다른 섹션 리드문(margin-top 16px)과 통일 */
+    grid-template-areas:"lead lead lead lead lead" ". rab . cpn .";
+    grid-template-columns:minmax(0,1fr) 104px 6px 172px minmax(0,1fr);
+    grid-template-columns:minmax(0,1fr) clamp(104px,calc(28.79cqi + 0.4px),191px)
+      clamp(6px,calc(9.09cqi - 26.7px),34px) clamp(172px,calc(42.76cqi + 18.1px),299.3px) minmax(0,1fr);
+    row-gap:10px;row-gap:clamp(10px,calc(2.69cqi + 0.3px),18px)}
+  .contents_div .csg-doc .csg-h4-lead{top:0;justify-self:center;text-align:center}
+  /* 토끼 104→191px */
+  .contents_div .csg-doc .csg-h4-rw{top:0;width:104px;width:clamp(104px,calc(28.79cqi + 0.4px),191px)}
+  /* 쿠폰 172→299px, 비율 유지 */
+  .contents_div .csg-doc .csg-h4-cpn{height:auto;max-width:none;
+    width:172px;width:clamp(172px,calc(42.76cqi + 18.1px),299.3px);
+    top:-40px;top:clamp(-41px,calc(-0.34cqi - 38.8px),-40px)}
+  /* 정보 카드 — 겹침 -52→-76px, 좌우 여백 17→26px, 모서리 16→22px */
+  .contents_div .csg-doc .csg-h4 + .csg-info{
+    margin-top:-52px;margin-top:clamp(-76px,calc(-8.08cqi - 22.9px),-52px);
+    padding:10px 17px;padding:10px clamp(17px,calc(3.03cqi + 6.1px),26px);
+    /* 위아래 여백: 화면 폭 573px 10px → 370px 0 */
+    padding-top:clamp(0px,calc(4.926vw - 18.23px),10px);padding-bottom:clamp(0px,calc(4.926vw - 18.23px),10px);
+    border-radius:16px;border-radius:clamp(16px,calc(2.02cqi + 8.7px),22px)}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl{margin-top:0}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl>li{
+    padding:13px 2px;padding:clamp(13px,calc(0.67cqi + 10.6px),15px) 2px;
+    gap:11px;gap:clamp(11px,calc(1.01cqi + 7.4px),14px)}
+  /* 카드 글자 13→16px, 라벨 캡슐 높이 17→24 · 좌우 7→11 · 글자 10→13px */
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-dl p{font-size:13px;font-size:clamp(13px,calc(1.01cqi + 9.36px),16px)}
+  .contents_div .csg-doc .csg-h4 + .csg-info .csg-lb{
+    height:17px;height:clamp(17px,calc(2.357cqi + 8.5px),24px);
+    padding:0 7px;padding:0 clamp(7px,calc(1.347cqi + 2.15px),11px);
+    font-size:10px;font-size:clamp(10px,calc(1.01cqi + 6.36px),13px)}
+}
+@container (max-width:618px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:112px;--rab-h:213px;--rab-right:16px;--rab-cut:61px}
+}
+@container (max-width:593px){
+  .contents_div .csg-doc .csg-why-rows{--rab-w:104px;--rab-h:198px;--rab-right:16px;--rab-cut:56px}
+}
+@container (max-width:568px){
+  /* 푸터 벽돌 2단계 ×0.76 */
+  .contents_div .csg-doc .csg-foot{--bk:0.76}
+  .contents_div .csg-doc{
+    --fs-h2:22px;--fs-foot:21px;--fs-h3:17px;--fs-kicker:10px;--fs-num:9.5px;
+    --fs-body:14px;--fs-lead:13.5px;--fs-nav:12px;--fs-tag:11px;--fs-micro:10px;
+    --fs-cap:10px;--fs-note:10px;--fs-hash:11px;
+    --gut:20px;--band:44px;--kick:22px;
+    --cap-h:17px;--cap-px:7px;--cap-fs:10px;--cap-fw:400;
+    --cd-py:22px;--cd-px:17px;
+    line-height:1.6}
+  .contents_div .csg-doc .csg-nm{font-size:13.5px}
+  .contents_div .csg-doc .csg-ev-t{font-size:13.5px}
+  .contents_div .csg-doc .csg-pt{font-size:12px}
+  .contents_div .csg-doc .csg-dl p{font-size:13.5px}
+  .contents_div .csg-doc .csg-onum>li>strong{font-size:14px}
+  .contents_div .csg-doc .csg-sub{margin-top:0}
+  .contents_div .csg-doc .csg-sub>li{font-size:13.5px}
+  .contents_div .csg-doc .csg-cta{font-size:14px;padding:11px 18px;margin-top:22px}
+  .contents_div .csg-doc .csg-cta--wide{min-height:52px;padding:15px 18px;
+    border-radius:13px;font-size:15px;margin-top:26px}
+  .contents_div .csg-doc .csg-sublead{font-size:13.5px}
+  .contents_div .csg-doc{--num-sz:20px}
+  .contents_div .csg-doc .csg-intro{padding:30px clamp(16px,6.25%,50px)}
+  .contents_div .csg-doc .csg-sec{padding-top:50px;padding-bottom:50px}
+  .contents_div .csg-doc .csg-sec[data-sec="s5"]{padding-bottom:84px}
+  /* 추석 이벤트 — 키커 위 여백 50 → 43px */
+  .contents_div .csg-doc .csg-sec[data-sec="s5"]{padding-top:43px}
+  .contents_div .csg-doc .csg-intro-p{margin-top:18px;padding-left:10px;padding-right:10px}
+  .contents_div .csg-doc .csg-frame{--fr1:3px;--fr2:9px;--fr3:15px;--frs:7px;
+    padding:44px 24px 47px;border-width:8px;border-radius:4px}
+  .contents_div .csg-doc .csg-frame::before{border-radius:3px}
+  .contents_div .csg-doc .csg-knot{top:-6px;right:29px;width:31px;height:120px}
+  .contents_div .csg-doc .csg-nav-btn{min-height:60px;padding:6px 3px;font-weight:500}
+  .contents_div .csg-doc .csg-nav-btn+.csg-nav-btn::before{height:18px;margin-top:-9px}
+  .contents_div .csg-doc .csg-band4{width:168px;height:6px}
+  .contents_div .csg-doc .csg-cloud--a{top:26px;right:-4px;width:89.6px}
+  .contents_div .csg-doc .csg-cloud--b{top:38px;left:-4px;width:68.8px}
+  /* 리드문 아래 간격 — 모바일 전 섹션 20px 통일 */
+  .contents_div .csg-doc .csg-defs{margin-top:20px;grid-template-columns:1fr;gap:22px}
+  .contents_div .csg-doc .csg-def{padding-left:13px;border-left-width:2px}
+  .contents_div .csg-doc .csg-benefit{margin-top:24px}
+  .contents_div .csg-doc .csg-way{margin-top:24px;flex-wrap:wrap;
+    gap:20px;padding:12px 16px;border-radius:999px}
+  .contents_div .csg-doc .csg-way .csg-cta{margin-top:0}
+  .contents_div .csg-doc .csg-why>.csg-def-h{position:relative;z-index:1}
+  .contents_div .csg-doc .csg-why{margin-top:24px;border-radius:18px}
+  .contents_div .csg-doc .csg-why-rows{margin-top:14px;gap:10px;
+    --rab-w:96px;--rab-h:183px;--rab-right:23px;--rab-cut:51px}
+  .contents_div .csg-doc .csg-why-row{padding:12px 13px;border-radius:12px}
+  .contents_div .csg-doc .csg-why-cap{margin-top:16px}
+  .contents_div .csg-doc .csg-why-sum{padding:12px 14px;border-radius:12px}
+  .contents_div .csg-doc .csg-panel{margin-top:20px;padding:22px 17px 4px;border-radius:20px}
+  .contents_div .csg-doc .csg-cats{column-count:1;column-rule:none}
+  .contents_div .csg-doc .csg-cat{margin-bottom:20px}
+  .contents_div .csg-doc .csg-dc{filter:drop-shadow(0 2px 3px rgba(122,96,44,.20))}
+  /* 선물 모음집 꾸밈 이미지 — 600 이하: 크기·좌우 위치는 800 기준 비례 축소를 계속 이어가고,
+     세로는 문구가 30px 올라간 만큼 올린 뒤 각 이미지 가운데 높이를 고정(작아지면 제자리에서 줄어듦) */
+  .contents_div .csg-doc .csg-dc--ginkgo{top:calc(79.84px - 2.5575cqi)}
+  .contents_div .csg-doc .csg-dc--yakgwa{top:calc(124.28px - 4.2131cqi)}
+  .contents_div .csg-doc .csg-dc--apple{top:calc(49.12px - 2.5625cqi)}
+  .contents_div .csg-doc .csg-dc--pear{top:calc(66.69px - 3.1158cqi)}
+  .contents_div .csg-doc .csg-dc--gift{top:calc(125.89px - 4.6063cqi)}
+  .contents_div .csg-doc .csg-dc--maple{top:calc(44.08px - 2.2208cqi)}
+  .contents_div .csg-doc .csg-evs{margin-top:20px;gap:6px;
+    flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start}
+  .contents_div .csg-doc .csg-picks{margin-top:34px}
+  /* 특별시 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
+  .contents_div .csg-doc .csg-pk{padding:22px 0}
+  .contents_div .csg-doc .csg-pk-n{font-size:26px}
+  /* 키커 캡슐 — 10px 글자는 광학 중심이 위로 떠 보여 윗여백 보정 */
+  .contents_div .csg-doc .csg-kick{padding-top:0.27em}
+  .contents_div .csg-doc .csg-info{margin-top:34px}
+  .contents_div .csg-doc .csg-h4s--b{display:none}
+  /* 웹에서 준 상대 이동값은 모바일에서 해제 — 1열로 쌓이면 기준이 달라진다 */
+  /* 등불 — 좁은 폭에서는 더 낮게 */
+  /* 왼쪽 등불 — 폭 31%로 줄다가 136px(미리보기 470px 시점 크기)에서 멈춤, 위치 46 → 6px(40px 아래로) */
+  .contents_div .csg-doc .csg-lan--a{bottom:6px;width:31%;width:max(31%,136px)}
+  /* 오른쪽 등불 — 위치 26 → 6px(20px 아래로) */
+  .contents_div .csg-doc .csg-lan--b{bottom:6px;width:21%}
+  .contents_div .csg-doc .csg-hash{margin-top:34px;padding-top:26px}
+  .contents_div .csg-doc .csg-benefit{border-radius:18px}
+  .contents_div .csg-doc .csg-gift-a{gap:11px;padding:10px 2px;border-radius:12px}
+  .contents_div .csg-doc .csg-fig{width:67.2px;border-radius:10px}
+  .contents_div .csg-doc .csg-gift-t{gap:5px}
+  .contents_div .csg-doc .csg-cta .csg-ar{font-size:15px}
+  .contents_div .csg-doc .csg-ev-a{display:flex;width:100%;justify-content:space-between;
+    min-height:40px;padding:9px 18px;gap:8px}
+  .contents_div .csg-doc .csg-ev-t{flex:1 1 auto;font-size:12.5px;line-height:1.4}
+  .contents_div .csg-doc .csg-ev-a .csg-ar{font-size:14px}
+  .contents_div .csg-doc .csg-ev-a .csg-ar{font-size:15px}
+  .contents_div .csg-doc .csg-rice{padding:5px 10px}
+}
+@container (max-width:508px){
+  /* 푸터 벽돌 3단계 ×0.68 */
+  .contents_div .csg-doc .csg-foot{--bk:0.68}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:88px;--rab-h:167px;--rab-right:23px;--rab-cut:47px}
+}
+@container (max-width:448px){
+  /* 푸터 벽돌 4단계 ×0.61 */
+  .contents_div .csg-doc .csg-foot{--bk:0.61}
+  .contents_div .csg-doc .csg-way{gap:10px;justify-content:space-between}
+  .contents_div .csg-doc{--fs-nav:12px}
+  .contents_div .csg-doc .csg-nav-btn{min-height:54px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:78px;--rab-h:148px;--rab-right:21px;--rab-cut:41px}
+  .contents_div .csg-doc .csg-knot{top:-5px;right:24px;width:25px;height:97px}
+}
+@container (max-width:418px){
+  /* 푸터 벽돌 5단계 ×0.55 */
+  .contents_div .csg-doc .csg-foot{--bk:0.55}
+  /* 추석선물 추천 — 본문·이미지 간격 20 → 14px (CMS에서도 적용되도록 선택자 한 단계 더) */
+  .contents_div .csg-doc .csg-pk .csg-pk-c>.csg-pkfig,
+  .contents_div .csg-doc .csg-pk .csg-pk-c>.csg-sl{margin-left:14px}
+  /* 섹션 제목 좌우 여백 17px 추가 */
+  .contents_div .csg-doc .csg-h2{padding-left:17px;padding-right:17px}
+  /* 리드문 좌우 여백 5px 추가 */
+  .contents_div .csg-doc .csg-lead{padding-left:5px;padding-right:5px}
+  /* 혜택-기부방법-왜좋을까 카드 사이 간격: 24px의 70% */
+  .contents_div .csg-doc .csg-way,.contents_div .csg-doc .csg-why{margin-top:16.8px}
+  /* 타이틀-본문 간격 -2px (12→10 / 18→16 / 14→12) */
+  .contents_div .csg-doc .csg-def-b{margin-top:10px}
+  .contents_div .csg-doc .csg-onum{margin-top:16px}
+  .contents_div .csg-doc .csg-why-rows{margin-top:12px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:70px;--rab-h:133px;--rab-right:21px;--rab-cut:37px}
+  .contents_div .csg-doc .csg-intro-p{padding-left:7px;padding-right:7px}
+}
+@container (max-width:403px){
+  /* 할인 기획전 제목 — '합리적으로' 뒤에서 줄바꿈 */
+  .contents_div .csg-doc .csg-h2-br--s4{display:block}
+}
+@container (max-width:393px){
+  /* 추석 이벤트 제목 — '고향사랑기부제는' 뒤에서 줄바꿈 */
+  .contents_div .csg-doc .csg-h2-br{display:block}
+}
+@container (max-width:388px){
+  /* 푸터 벽돌 6단계 ×0.49 */
+  .contents_div .csg-doc .csg-foot{--bk:0.49}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:64px;--rab-h:121px;--rab-right:21px;--rab-cut:34px}
+  /* 추석선물 추천 — 이미지 옆 본문 13px(420) → 최소 12.5px(320) */
+  .contents_div .csg-doc .csg-pick-b{font-size:13px;font-size:clamp(12.5px,calc(0.5vw + 10.9px),13px)}
+}
+@container (max-width:378px){
+  .contents_div .csg-doc .csg-intro,.contents_div .csg-doc .csg-sec,
+  .contents_div .csg-doc .csg-dash,.contents_div .csg-doc .csg-foot{padding-left:15px;padding-right:15px}
+  .contents_div .csg-doc .csg-deco{left:15px;right:15px}
+}
+@container (max-width:358px){
+  /* 푸터 벽돌 7단계 ×0.45 */
+  .contents_div .csg-doc .csg-foot{--bk:0.45}
+  .contents_div .csg-doc .csg-cloud--a{width:83.3px}
+  .contents_div .csg-doc .csg-cloud--b{width:64px}
+  .contents_div .csg-doc{
+    --fs-h2:21.5px;--fs-foot:18px;--fs-h3:16px;--fs-body:13.5px;--fs-lead:13px;--fs-nav:11px;
+    --fs-tag:10.5px;--fs-hash:10.5px;--gut:16px;--band:38px;--cd-py:19px;--cd-px:14px;
+    line-height:1.6}
+  .contents_div .csg-doc .csg-nm{font-size:13px}
+  .contents_div .csg-doc .csg-ev-t{font-size:13px}
+  .contents_div .csg-doc .csg-pt{font-size:11.5px}
+  .contents_div .csg-doc .csg-dl p{font-size:13px}
+  .contents_div .csg-doc .csg-sub>li{font-size:13px}
+  .contents_div .csg-doc .csg-cta{font-size:13.5px}
+  .contents_div .csg-doc .csg-sublead{font-size:13px}
+  .contents_div .csg-doc .csg-nav-btn{padding:6px 1px}
+  .contents_div .csg-doc .csg-nav-btn+.csg-nav-btn::before{height:16px;margin-top:-8px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:58px;--rab-h:110px;--rab-right:21px;--rab-cut:31px}
+  .contents_div .csg-doc .csg-knot{top:-4px;right:22px;width:23px;height:89px}
+}
+@container (max-width:328px){
+  /* 푸터 벽돌 8단계 ×0.41 */
+  .contents_div .csg-doc .csg-foot{--bk:0.41}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:52px;--rab-h:99px;--rab-right:21px;--rab-cut:28px}
+}
+@container (max-width:324px){
+  /* 토끼+별 세트 360px 대비 5% 축소 */
+  .contents_div .csg-doc .csg-why-rows{--rab-w:49.4px;--rab-h:94.05px;--rab-right:21px;--rab-cut:26.6px}
+}
+@container (max-width:308px){
+  /* 푸터 벽돌 9단계 ×0.38 */
+  .contents_div .csg-doc .csg-foot{--bk:0.38;--bk-mid:0}
+  /* 추석선물 추천 — 아주 좁은 폭에선 본문이 이미지만큼 길어져 브랜드 쌀 제목이 본문에 붙으므로 올림 해제 */
+  .contents_div .csg-doc .csg-pk-x{margin-top:4px}
+  .contents_div .csg-doc{--fs-nav:10px}
+  .contents_div .csg-doc .csg-why-rows{--rab-w:44px;--rab-h:83px;--rab-right:21px;--rab-cut:23px}
+  .contents_div .csg-doc .csg-knot{top:-4px;right:20px;width:21px;height:81px}
+}
+
+/* 추석 이벤트 긴 이벤트명(김치) — 화면 361→350px 동안 자간만 최대 0.5px 더 줄여 한 줄 유지
+   글자 크기는 그대로, 기본 자간 -0.27px(본문 13.5px × -0.02em)에서 시작 */
+@media (max-width:361px){
+  .contents_div .csg-doc .csg-ev-t--fit{letter-spacing:calc(-0.27px - clamp(0px,calc(21.66px - 6vw),0.5px))}
+}
+
+@media (max-width:750px){
+  /* 푸터 벽돌 1단계 ×0.85 — 양쪽 바깥으로 40px(작아질수록 같은 비율로 줄어듦) */
+  .contents_div .csg-foot{--bk:.85;--bk-sx:calc(47.06px * var(--bk))}
+}
+@container (max-width:718px){
+  /* 푸터 벽돌 1단계 ×0.85 — 양쪽 바깥으로 40px(작아질수록 같은 비율로 줄어듦) */
+  .contents_div .csg-foot{--bk:.85;--bk-sx:calc(47.06px * var(--bk))}
+}
+
+@media (max-width:400px){
+  /* 푸터 벽돌 — 화면 400px에서 4px 아래로, 350px까지 점점 8px */
+  .contents_div .csg-foot{--bk-dy:4px;--bk-dy:clamp(4px,calc(36px - 8vw),8px)}
+}
+@container (max-width:368px){
+  /* 푸터 벽돌 — 화면 400px에서 4px 아래로, 350px까지 점점 8px */
+  .contents_div .csg-foot{--bk-dy:4px;--bk-dy:clamp(4px,calc(36px - 8vw),8px)}
+}
+
+@media (max-width:426px){
+  /* 추석선물 추천 제목 — '선정했습니다' → '선정!'으로 줄여 2줄 유지 */
+  .contents_div .csg-doc .csg-txt-l{display:none}
+  .contents_div .csg-doc .csg-txt-s{display:inline}
+}
+@container (max-width:394px){
+  /* 추석선물 추천 제목 — '선정했습니다' → '선정!'으로 줄여 2줄 유지 */
+  .contents_div .csg-doc .csg-txt-l{display:none}
+  .contents_div .csg-doc .csg-txt-s{display:inline}
+}
+
+@media (max-width:376px){
+  /* 선물 모음집 꾸밈 이미지 — 화면 376→350px 동안 좌우 3개씩 바깥으로 모이며 이동(제목과 간격 유지)
+     안쪽 이미지일수록 더 많이: 은행잎·단풍 6px, 굴비·보자기 13px, 사과·배 16px */
+  .contents_div .csg-doc .csg-dc--ginkgo{left:calc(clamp(-15px,-1.875cqi,-6.5625px) - clamp(0px,calc((376px - 100vw) * 0.2308),6px))}
+  .contents_div .csg-doc .csg-dc--yakgwa{left:calc(clamp(22.3125px,6.375cqi,51px) - clamp(0px,calc((376px - 100vw) * 0.5000),13px))}
+  .contents_div .csg-doc .csg-dc--apple{left:calc(clamp(56px,16cqi,128px) - clamp(0px,calc((376px - 100vw) * 0.6154),16px))}
+  .contents_div .csg-doc .csg-dc--maple{right:calc(clamp(-9px,-1.125cqi,-3.9375px) - clamp(0px,calc((376px - 100vw) * 0.2308),6px))}
+  .contents_div .csg-doc .csg-dc--gift{right:calc(clamp(16.1875px,4.625cqi,37px) - clamp(0px,calc((376px - 100vw) * 0.5000),13px))}
+  .contents_div .csg-doc .csg-dc--pear{right:calc(clamp(52.5px,15cqi,120px) - clamp(0px,calc((376px - 100vw) * 0.6154),16px))}
+}
+@container (max-width:344px){
+  /* 선물 모음집 꾸밈 이미지 — 화면 376→350px 동안 좌우 3개씩 바깥으로 모이며 이동(제목과 간격 유지)
+     안쪽 이미지일수록 더 많이: 은행잎·단풍 6px, 굴비·보자기 13px, 사과·배 16px */
+  .contents_div .csg-doc .csg-dc--ginkgo{left:calc(clamp(-15px,-1.875cqi,-6.5625px) - clamp(0px,calc((376px - 100vw) * 0.2308),6px))}
+  .contents_div .csg-doc .csg-dc--yakgwa{left:calc(clamp(22.3125px,6.375cqi,51px) - clamp(0px,calc((376px - 100vw) * 0.5000),13px))}
+  .contents_div .csg-doc .csg-dc--apple{left:calc(clamp(56px,16cqi,128px) - clamp(0px,calc((376px - 100vw) * 0.6154),16px))}
+  .contents_div .csg-doc .csg-dc--maple{right:calc(clamp(-9px,-1.125cqi,-3.9375px) - clamp(0px,calc((376px - 100vw) * 0.2308),6px))}
+  .contents_div .csg-doc .csg-dc--gift{right:calc(clamp(16.1875px,4.625cqi,37px) - clamp(0px,calc((376px - 100vw) * 0.5000),13px))}
+  .contents_div .csg-doc .csg-dc--pear{right:calc(clamp(52.5px,15cqi,120px) - clamp(0px,calc((376px - 100vw) * 0.6154),16px))}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .contents_div .csg-doc *{transition-duration:.01ms !important}
+  .contents_div .csg-doc .csg-dc,
+  .contents_div .csg-doc .csg-h4-cpn,
+  .contents_div .csg-doc .csg-lan{animation:none !important}
+}
+
+</style>
+
+<div class="contents_div">
+<div class="csg-wrap">
+<div class="csg-doc">
+
+  <!-- HERO -->
+  <section class="csg-hero" aria-label="이번 추석엔 조금 특별한 선물">
+    <img class="csg-hero-img csg-hero-bg" src="img/히어로_배경.webp" width="1600" height="2114"
+         alt="이번 추석엔 조금 특별한 선물 - 선물+기부+세액공제까지 일석삼조"
+         fetchpriority="high" loading="eager">
+    <div class="csg-hero-item csg-hero-item--chestnut">
+      <img class="csg-hero-img" src="img/히어로_밤.webp" width="1600" height="2114" alt="" loading="eager">
+    </div>
+    <div class="csg-hero-item csg-hero-item--pear">
+      <img class="csg-hero-img" src="img/히어로_배.webp" width="1600" height="2114" alt="" loading="eager">
+    </div>
+    <div class="csg-hero-item csg-hero-item--apple">
+      <img class="csg-hero-img" src="img/히어로_사과.webp" width="1600" height="2114" alt="" loading="eager">
+    </div>
+    <div class="csg-hero-item csg-hero-item--gulbi">
+      <img class="csg-hero-img" src="img/히어로_굴비.webp" width="1600" height="2114" alt="" loading="eager">
+    </div>
+  </section>
+
+  <!-- NAV -->
+  <nav class="csg-nav" aria-label="본문 바로가기">
+    <div class="csg-nav-in">
+      <button type="button" class="csg-nav-btn" data-go="s1">기부제 안내</button>
+      <button type="button" class="csg-nav-btn" data-go="s2">선물 모음집</button>
+      <button type="button" class="csg-nav-btn" data-go="s3">특별시 추천</button>
+      <button type="button" class="csg-nav-btn" data-go="s4">할인 기획전</button>
+      <button type="button" class="csg-nav-btn" data-go="s5">추석 이벤트</button>
+    </div>
+  </nav>
+
+  <!-- INTRO -->
+  <section class="csg-intro">
+    <div class="csg-frame">
+      <img class="csg-knot" src="img/전통매듭.webp" alt="" width="49" height="190" aria-hidden="true" loading="lazy" decoding="async">
+      <span class="csg-fr-c csg-fr-tl" aria-hidden="true"></span>
+      <span class="csg-fr-c csg-fr-tr" aria-hidden="true"></span>
+      <span class="csg-fr-c csg-fr-bl" aria-hidden="true"></span>
+      <span class="csg-fr-c csg-fr-br" aria-hidden="true"></span>
+      <span class="csg-kick">2026 추석</span>
+      <h1 class="csg-h1"><em>올해&nbsp;추석선물</em>&nbsp;고민은<br class="csg-h1-br"> 이걸로&nbsp;종결</h1>
+      <p class="csg-intro-p">이맘때가 되면 시작되는 고민 “올해 추석 선물은 뭘로 하지?”<br class="csg-nbr"> 아직 정하지 못했다면 그 고민을 전남광주통합특별시가 끝내 드립니다.<br class="csg-nbr"> 이번 추석 고마운 마음을 담아 전남광주통합특별시를 선물하세요.</p>
+    </div>
+  </section>
+
+  <!-- S1 -->
+  <section class="csg-sec csg-sec--navy" data-sec="s1">
+    <span class="csg-band4" aria-hidden="true"></span>
+    <svg class="csg-cloud csg-cloud--a" viewBox="0 0 165 80" aria-hidden="true" focusable="false">
+      <path d="M165 33 L106 33 A5 5 0 0 1 101 28 L101 24 A5 5 0 0 1 106 19 L136 19 A5 5 0 0 0 141 14 L141 10 A5 5 0 0 0 136 5 L50 5 A5 5 0 0 0 45 10 L45 14 A5 5 0 0 0 50 19 L80 19 A5 5 0 0 1 85 24 L85 28 A5 5 0 0 1 80 33 L16 33 A5 5 0 0 0 11 38 L11 42 A5 5 0 0 0 16 47 L55 47 A5 5 0 0 1 60 52 L60 56 A5 5 0 0 1 55 61 L50 61 A5 5 0 0 0 45 66 L45 70 A5 5 0 0 0 50 75 L87 75 A5 5 0 0 0 92 70 L92 66 A5 5 0 0 0 87 61 L82 61 A5 5 0 0 1 77 56 L77 52 A5 5 0 0 1 82 47 L165 47" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <svg class="csg-cloud csg-cloud--b" viewBox="0 0 120 52" aria-hidden="true" focusable="false">
+      <path d="M0 5 L90 5 A5 5 0 0 1 95 10 L95 14 A5 5 0 0 1 90 19 L59 19 A5 5 0 0 0 54 24 L54 28 A5 5 0 0 0 59 33 L110 33 A5 5 0 0 1 115 38 L115 42 A5 5 0 0 1 110 47 L0 47" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <path d="M0 19 L20 19 A5 5 0 0 1 25 24 L25 28 A5 5 0 0 1 20 33 L0 33" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <span class="csg-kick">기부제 안내</span>
+    <h2 class="csg-h2">선물도 하고, <span class="csg-h2-p">세금도 아끼고,</span><br>고향도 챙기는 방법이 있다?</h2>
+    <p class="csg-lead">프로 선물러는 선물을 할 때도 세액공제와 기부까지 챙겨요.<br class="csg-nbr"> 전남광주통합특별시가 보증해 품질은 기본! 고향사랑기부제로 선물해 보세요.</p>
+
+    <div class="csg-defs">
+      <div class="csg-def">
+        <h3 class="csg-def-h">고향사랑기부제란?</h3>
+        <p class="csg-def-b">지역을 선택해 기부하면 기부자에게 세액공제와 답례품 혜택을 주는 제도로, 기부금은 지역의 소중한 재원으로 쓰여요</p>
+      </div>
+      <div class="csg-def">
+        <h3 class="csg-def-h">이것만 기억하세요</h3>
+        <p class="csg-def-b">기부자의 주민등록상 주소지의 기초자치단체 및 광역자치단체 본청을 제외한 곳에 기부가 필수</p>
+      </div>
+    </div>
+
+    <div class="csg-benefit">
+        <h3 class="csg-def-h">기부혜택</h3>
+        <ol class="csg-onum">
+          <li>
+            <span class="csg-num">1</span><strong>기부금에 대한 세액공제</strong>
+            <ul class="csg-sub">
+              <li>10만원 이하: 전액 공제</li>
+              <li>10만원 초과 20만원 이하: 초과분의 44% 공제</li>
+              <li>20만원 초과분: 일반 지자체 기준 16.5% 세액공제</li>
+              <li class="csg-sub-eg">예) 20만원 기부 시 14.4만원 공제(10만원 전액 + 초과분 10만원의 44%인 4.4만원)</li>
+            </ul>
+          </li>
+          <li>
+            <span class="csg-num">2</span><strong>기부금의 30% 이내 지역 특산품 제공</strong>
+          </li>
+        </ol>
+    </div>
+
+    <div class="csg-way">
+      <h3 class="csg-way-h">기부방법</h3>
+      <a class="csg-cta" href="https://ilovegohyang.go.kr/main.html" target="_blank" rel="noopener noreferrer">고향사랑e음 누리집<span class="csg-ar" aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="csg-why">
+      <h3 class="csg-def-h">고향사랑기부제 왜 좋을까?</h3>
+      <div class="csg-why-rows">
+        <img class="csg-rabbit" alt="" aria-hidden="true" width="166" height="315" loading="lazy" decoding="async"
+          src="img/엄지척토끼.webp">
+        <span class="csg-spk csg-spk--1" aria-hidden="true"></span>
+        <span class="csg-spk csg-spk--2" aria-hidden="true"></span>
+        <span class="csg-spk csg-spk--3" aria-hidden="true"></span>
+        <span class="csg-spk csg-spk--4" aria-hidden="true"></span>
+        <div class="csg-why-row">
+          <p class="csg-why-q">예를 들어볼까요?</p>
+          <p class="csg-why-p">전남광주통합특별시 시청에 10만원을 기부했다면, 10만원까지는 100% 세액공제가 되니 기부한 10만원은 낸 그대로 돌려받게 됩니다</p>
+          <p class="csg-why-q">플러스!</p>
+          <p class="csg-why-p">거기에 최대 30%, 즉 3만원 상당의 답례품까지 덤으로 받게 된답니다</p>
+        </div>
+      </div>
+      <p class="csg-why-cap">한 줄로는 이렇게 정리할 수 있어요</p>
+      <p class="csg-why-sum">“10만원 기부=세금에서 10만원 빼주고 3만원 답례품까지 얹어줌”</p>
+    </div>
+  </section>
+
+  <!-- S2 -->
+  <section class="csg-sec csg-sec--cream" data-sec="s2">
+    <span class="csg-band4" aria-hidden="true"></span>
+    <div class="csg-deco" aria-hidden="true">
+      <img class="csg-dc csg-dc--ginkgo" alt="" width="87" height="89" loading="lazy" decoding="async"
+        src="img/1.선물모음집_은행.webp">
+      <img class="csg-dc csg-dc--yakgwa" alt="" width="500" height="450" loading="lazy" decoding="async"
+        src="img/1.선물모음집_굴비.webp">
+      <img class="csg-dc csg-dc--apple" alt="" width="89" height="89" loading="lazy" decoding="async"
+        src="img/1.선물모음집_사과.webp">
+      <img class="csg-dc csg-dc--pear" alt="" width="129" height="109" loading="lazy" decoding="async"
+        src="img/1.선물모음집_배.webp">
+      <img class="csg-dc csg-dc--gift" alt="" width="167" height="181" loading="lazy" decoding="async"
+        src="img/1.선물모음집_선물.webp">
+      <img class="csg-dc csg-dc--maple" alt="" width="90" height="78" loading="lazy" decoding="async"
+        src="img/1.선물모음집_단풍.webp">
+    </div>
+    <span class="csg-kick">선물 모음집</span>
+    <h2 class="csg-h2">모두의 취향을 저격할<br><span class="csg-h2-p">추석 선물 모음집</span></h2>
+    <p class="csg-lead">선물을 클릭하면 고향사랑e음 상품 페이지로 이동합니다.<span class="csg-nohover"><br class="csg-nbr"> 자세한 정보를 확인하고 바로 기부할&nbsp;수&nbsp;있어요.</span></p>
+    <p class="csg-hint">(마우스를 올려 이미지를 확대해 보세요.)</p>
+    <div class="csg-panel">
+      <div class="csg-cats">
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">1</span><span class="csg-cat-t">부모님‧어르신을&nbsp;위한 기력&nbsp;보충&nbsp;선물</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2000009097" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/순천시.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">순천시</span><span class="csg-pt"><span class="csg-pt-n">—</span></span></span><span class="csg-nm">로컬푸드 농축산물꾸러미</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043048" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/고흥군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">고흥군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">고흥애찬 고흥 장어탕</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002041689" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/보성군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">보성군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">한봉 벌꿀집</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002042648" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/장흥군.jpeg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">장흥군</span><span class="csg-pt">60,000<b>P</b></span></span><span class="csg-nm">장흥한우 1등급 등심</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043165" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/함평군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">함평군</span><span class="csg-pt">20,000<b>P</b></span></span><span class="csg-nm">100% 암소한우 사골 곰탕</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002008436" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/완도군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">완도군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">청수수산 활전복 1kg</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">2</span><span class="csg-cat-t">MZ&nbsp;직원을&nbsp;위한 센스&nbsp;있는&nbsp;실속&nbsp;선물</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043462" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/동구.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">동구</span><span class="csg-pt">10,000<b>P</b></span></span><span class="csg-nm">독립서점 소년의서 도서상품권</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043063" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/영암군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">영암군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">탁주코리아 로맨스</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2000015191" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/무안군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">무안군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">한돈 생삼겹 모듬 세트</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002016039" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/진도군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">진도군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">진도담은 전복톳미역국+간장게장</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">3</span><span class="csg-cat-t">차례상, 명절&nbsp;상차림&nbsp;필수품</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002003162" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/나주시.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">나주시</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">명품 나주배 선물세트</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043120" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/담양군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">담양군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">온미당 구운한과 선물세트</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2000015209" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/영광군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">영광군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">법성포 밥도둑 굴비</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043670" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/곡성군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">곡성군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">곡성의 청정한 자연이 키운 명품 사과 이지플</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">4</span><span class="csg-cat-t">온&nbsp;가족이&nbsp;함께&nbsp;즐기는 프리미엄&nbsp;미식/디저트</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002014288" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/목포시.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">목포시</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">영현빵집 프리미엄 소금빵</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002015041" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/광양시.png" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">광양시</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">이레목장 유기농 산양유 플레인 요거트</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043152" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/남구.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">남구</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">오리탕 세트</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043699" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/광산구.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">광산구</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">서찬열 명인의 광주김치찜</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">5</span><span class="csg-cat-t">나를&nbsp;위한&nbsp;셀프&nbsp;선물</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002013581" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/시청.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">시청</span><span class="csg-pt">48,300<b>P</b></span></span><span class="csg-nm">기아타이거즈 레플리카 유니폼</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002043555" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/서구.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">서구</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">흑백요리사 안유성 명장의 비법소스 3종</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2000022366" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/장성군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">장성군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">청산녹수 편백숲 산소막걸리12</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">6</span><span class="csg-cat-t">로컬&nbsp;탐방&nbsp;연휴&nbsp;체험권</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002042368" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/여수시.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">여수시</span><span class="csg-pt">180,000<b>P</b></span></span><span class="csg-nm">섬산책 피크닉 도시락 체험</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002003463" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/구례군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">구례군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">도자기 원데이클래스 체험권</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002008274" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/화순군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">화순군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">고인돌피자&amp;계절차만들기 체험</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002002349" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/강진군.webp" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">강진군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">가우도즐기기 이용권(제트보트+강진사랑상품권)</span></span></a></li></ul></article>
+<article class="csg-cat"><h3 class="csg-cat-h"><span class="csg-num">7</span><span class="csg-cat-t">산지직송 고품질&nbsp;신선&nbsp;식재료</span></h3><ul class="csg-lbox csg-gifts"><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002040578" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/북구.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">북구</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">광주축협 한우등심 1등급</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002010707" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/해남군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">해남군</span><span class="csg-pt">30,000<b>P</b></span></span><span class="csg-nm">이웅 참기름 120ml + 생들기름 120ml</span></span></a></li><li class="csg-gift"><a class="csg-gift-a" href="https://ilovegohyang.go.kr/items/details-main.html?code=G2002042965" target="_blank" rel="noopener noreferrer"><span class="csg-fig"><img src="img/신안군.jpg" alt="" loading="lazy" decoding="async"></span><span class="csg-gift-t"><span class="csg-gift-top"><span class="csg-lb csg-rg">신안군</span><span class="csg-pt">40,000<b>P</b></span></span><span class="csg-nm">국내산 신안 활새우 1kg</span></span></a></li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 -->
+  <section class="csg-sec csg-sec--band" data-sec="s3">
+    <span class="csg-band4" aria-hidden="true"></span>
+    <span class="csg-kick">추석선물 추천</span>
+    <h2 class="csg-h2">전남광주통합특별시가 <span class="csg-txt-l">선정했습니다</span><span class="csg-txt-s">선정!</span><br><span class="csg-h2-p">이런 선물은 어때요?</span></h2>
+    <div class="csg-picks">
+      <article class="csg-pk">
+        <div class="csg-pk-n" aria-hidden="true">01</div>
+        <div class="csg-pk-c">
+          <h3 class="csg-pick-h">9월 이달의 전통주 ‘섬진강바람오크40’</h3>
+          <figure class="csg-pkfig"><img src="img/섬진강바람오크40.webp" alt="섬진강바람 오크40" loading="lazy" decoding="async"></figure>
+          <p class="csg-pick-b">잘 익은 황매실, 돌배, 유자 등 지역 농산물을 원료로 했으며 매실과 돌배를 발효‧증류한 뒤 오크통에서 1년간 숙성해 완성. 매실 특유의 향긋한 풍미와 오크 숙성에서 더해진 깊은 향과 맛이 조화를 이루는 것이 특징</p>
+          <p class="csg-note">*구매처: <a class="csg-lk" href="https://seomjinspring.com/shop/?idx=12" target="_blank" rel="noopener noreferrer">섬진강의봄 공식 누리집</a>, <a class="csg-lk" href="https://www.jnmall.kr/" target="_blank" rel="noopener noreferrer">남도장터</a> 등</p>
+        </div>
+      </article>
+      <article class="csg-pk">
+        <div class="csg-pk-n" aria-hidden="true">02</div>
+        <div class="csg-pk-c">
+          <h3 class="csg-pick-h">2026년 10대 고품질 브랜드 쌀</h3>
+          <div class="csg-sl" aria-roledescription="carousel" aria-label="2026 우수 브랜드 쌀 10개">
+            <div class="csg-sl-win"><ul class="csg-sl-track"><li><figure class="csg-pkfig"><img src="img/대숲맑은담양쌀.webp" alt="대숲맑은담양쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/땅끝햇살.webp" alt="땅끝햇살" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/왕건이탐낸쌀.webp" alt="왕건이탐낸쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/녹차미인보성쌀.webp" alt="녹차미인보성쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/아르미쌀.webp" alt="아르미쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/사계절이사는집.webp" alt="사계절이사는집" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/달마지쌀.webp" alt="달마지쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/수호천사건강미.webp" alt="수호천사건강미" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/황토랑쌀.webp" alt="황토랑쌀" loading="lazy" decoding="async"></figure></li><li><figure class="csg-pkfig"><img src="img/보배진미쌀.webp" alt="보배진미쌀" loading="lazy" decoding="async"></figure></li></ul>
+              <button type="button" class="csg-sl-b csg-sl-prev" aria-label="이전 브랜드"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 4.5 L8 12 L15 19.5" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="csg-sl-b csg-sl-next" aria-label="다음 브랜드"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4.5 L16 12 L9 19.5" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+            <div class="csg-sl-dots" role="group" aria-label="브랜드 선택"></div>
+            <p class="csg-sl-cap" aria-live="polite"><span class="csg-sl-i">1</span>/<span>10</span><span class="csg-sl-nm">대숲맑은담양쌀</span></p>
+          </div>
+          <p class="csg-pick-b">품질과 브랜드 경쟁력을 인정받은 전남광주 대표 쌀로 전문기관이 품종 혼입률과 식미 등을 블라인드 방식으로 평가해 선정</p>
+        </div>
+        <div class="csg-pk-x">
+          <p class="csg-sublead"><span class="csg-dia" aria-hidden="true"></span>2026 우수 브랜드 쌀 10개</p>
+          <ul class="csg-rices">
+<li><a class="csg-rice" href="https://www.jnmall.kr/product/5402-2564" target="_blank" rel="noopener noreferrer">대숲맑은담양쌀</a></li><li><a class="csg-rice" href="https://www.hnmiso.com/kwa-ABS_goods_v-467-1001001" target="_blank" rel="noopener noreferrer">땅끝햇살</a></li><li><a class="csg-rice" href="https://najumall.kr/product/%EB%82%98%EC%A3%BC%EC%8B%9C%EB%86%8D%ED%98%91%EC%8C%80%EC%A1%B0%ED%95%A9-25%EB%85%84-%ED%96%85%EC%8C%80-%EC%99%95%EA%B1%B4%EC%9D%B4-%ED%83%90%EB%82%B8%EC%8C%80-10kg%EC%A0%84%EB%82%A8-10%EB%8C%80-%EA%B3%A0%ED%92%88%EC%A7%88-%EB%B8%8C%EB%9E%9C%EB%93%9C-%EC%8C%80-%EC%84%A0%EC%A0%95/918/" target="_blank" rel="noopener noreferrer">왕건이탐낸쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/748-365" target="_blank" rel="noopener noreferrer">녹차미인보성쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/959-521" target="_blank" rel="noopener noreferrer">아르미쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1493-39779" target="_blank" rel="noopener noreferrer">사계절이사는집</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1120-646" target="_blank" rel="noopener noreferrer">달마지쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/698-335" target="_blank" rel="noopener noreferrer">수호천사건강미</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/889-476" target="_blank" rel="noopener noreferrer">황토랑쌀</a></li><li><a class="csg-rice" href="https://www.jnmall.kr/product/1337-34047" target="_blank" rel="noopener noreferrer">보배진미쌀</a></li>
+          </ul>
+          <p class="csg-note">*브랜드명을 클릭하면 판매 페이지로 이동합니다</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- S4 -->
+  <section class="csg-sec csg-sec--cream" data-sec="s4">
+    <span class="csg-band4" aria-hidden="true"></span>
+    <span class="csg-kick">할인 기획전</span>
+    <h2 class="csg-h2">추석 선물도 <span class="csg-h2-p">합리적으로</span><br class="csg-h2-br csg-h2-br--s4"> 준비하세요</h2>
+    <div class="csg-h4">
+      <div class="csg-h4-rw">
+        <img class="csg-h4-rab" src="img/수협토끼.webp" alt="수산물 바구니를 든 캐릭터" width="382" height="684" loading="lazy" decoding="async">
+        <span class="csg-h4s csg-h4s--a" aria-hidden="true"></span>
+        <span class="csg-h4s csg-h4s--b" aria-hidden="true"></span>
+        <span class="csg-h4s csg-h4s--c" aria-hidden="true"></span>
+      </div>
+      <p class="csg-lead csg-h4-lead">전남광주통합특별시와 수협중앙회가 함께하는<br class="csg-nbr"> 2026년 추석맞이 전남광주 수산물 기획전!<br class="csg-nbr"> 남도 바다에서 자란 수산물을 쿠폰 할인가로&nbsp;만나보세요.</p>
+      <img class="csg-h4-cpn" src="img/쿠폰.webp" alt="20% 할인 쿠폰" width="630" height="378" loading="lazy" decoding="async">
+    </div>
+    <div class="csg-info">
+      <ul class="csg-dl csg-lbox">
+        <li><span class="csg-lb">할인품목</span><p>전복, 민물장어, 조피볼락(우럭)</p></li>
+        <li><span class="csg-lb">할인내용</span><p>수협쇼핑에서 행사 상품 구매 시 최종 결제금액의 20%&#8288;를 상품당 1만원까지 할인&#8288;(횟수&nbsp;제한&nbsp;없음)</p></li>
+      </ul>
+    </div>
+    <a class="csg-cta csg-cta--navy csg-cta--wide" href="https://www.shshopping.co.kr/shypMall/display/spexhbt/EX-001002F?spexhbtNo=2026090301_1" target="_blank" rel="noopener noreferrer">수협쇼핑 바로가기<span class="csg-ar" aria-hidden="true">→</span></a>
+  </section>
+
+  <div class="csg-dash" aria-hidden="true"></div>
+
+  <!-- S5 -->
+  <section class="csg-sec csg-sec--band" data-sec="s5">
+    <span class="csg-kick">추석 이벤트</span>
+    <h2 class="csg-h2">고향사랑기부제는<br class="csg-h2-br"> <span class="csg-h2-p">추석&nbsp;맞이&nbsp;이벤트&nbsp;중!</span></h2>
+    <p class="csg-lead">넉넉한 한가위를 응원합니다.<br class="csg-nbr"> 고향사랑기부제 이벤트에 참여해 선물까지 야무지게 챙겨보세요!</p>
+    <ul class="csg-evs">
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4002" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">남구</span> 네이버페이 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4052" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">해남</span> 명품꾸러미 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4082" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">여수</span> 편의점 상품권 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4160" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t">추석엔 <span class="csg-evr">곡성</span>愛 고향사랑 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4207" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t">추석엔 고향사랑, <span class="csg-evr">고흥</span>사랑! 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4229" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">무안군</span> 추석맞이 역대급 혜택 제공 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4233" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t csg-ev-t--fit"><span class="csg-evr">전남광주통합특별시청</span> 김치를 선물합니다 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4237" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">광산구</span> 추석맞이 장보기 지원 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4270" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">담양</span> 햅쌀 증정 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+<li class="csg-ev"><a class="csg-ev-a" href="https://ilovegohyang.go.kr/featured/eventDetail.html?pages=4275" target="_blank" rel="noopener noreferrer"><span class="csg-ev-t"><span class="csg-evr">목포</span> 추석맞이 이벤트</span><span class="csg-ar" aria-hidden="true">→</span></a></li>
+    </ul>
+    <img class="csg-lan csg-lan--a" alt="" aria-hidden="true" width="912" height="910" loading="lazy" decoding="async" src="img/등불.webp">
+      <img class="csg-lan csg-lan--b" alt="" aria-hidden="true" width="912" height="910" loading="lazy" decoding="async" src="img/등불.webp">
+      <img class="csg-roof" alt="" aria-hidden="true" width="1600" height="295" loading="lazy" decoding="async"
+      src="img/지붕.webp">
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="csg-foot">
+    <p class="csg-foot-p">전남광주통합특별시 고향사랑기부제</p>
+    <h2 class="csg-foot-t">지역 특산품 <em>더보기</em></h2>
+    <a class="csg-cta csg-cta--wide" href="https://ilovegohyang.go.kr/main.html" target="_blank" rel="noopener noreferrer">고향사랑e음 누리집<span class="csg-ar" aria-hidden="true">→</span></a>
+    <ul class="csg-hash">
+<li class="csg-tag">#추석선물</li><li class="csg-tag">#고향사랑기부제</li><li class="csg-tag">#전남광주통합특별시</li><li class="csg-tag">#추석답례품</li><li class="csg-tag">#세액공제</li><li class="csg-tag">#고향사랑e음</li><li class="csg-tag">#지역특산품</li><li class="csg-tag">#명절선물</li><li class="csg-tag">#추석이벤트</li><li class="csg-tag">#로컬푸드</li>
+    </ul>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<script>
+/* ===== HERO : 오브젝트 등장 애니메이션 ===== */
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var READY = 'csg-hero--ready', ACTIVE = 'csg-hero--active';
+  var THRESHOLD = 0.35; // 히어로가 35% 보이면 시작
+  var REPLAY = false;   // true: 화면에 다시 들어올 때마다 재생
+
+  var heroes = root.querySelectorAll('.csg-hero:not([data-hero-init])');
+  if(!heroes.length) return;
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 동작 줄이기 설정이거나 IntersectionObserver 미지원이면 정지 이미지로 표시
+  if(reduceMotion || !('IntersectionObserver' in window)) return;
+
+  // 오브젝트 이미지가 준비된 뒤 애니메이션 시작 (최대 3초 대기)
+  function whenItemsLoaded(hero){
+    var imgs = hero.querySelectorAll('.csg-hero-item img');
+    var waits = Array.prototype.map.call(imgs, function(img){
+      if(img.complete) return Promise.resolve();
+      return new Promise(function(done){
+        img.addEventListener('load', done, { once:true });
+        img.addEventListener('error', done, { once:true });
+      });
+    });
+    var timeout = new Promise(function(done){ setTimeout(done, 3000); });
+    return Promise.race([Promise.all(waits), timeout]);
+  }
+
+  // 진입 판정: 히어로 면적의 35%가 보이면 시작.
+  // 단, 가로 모드처럼 화면 세로가 짧아 35%가 한 번에 들어올 수 없을 때는
+  // 보이는 높이가 화면 높이의 60% 이상이면 시작 (오브젝트가 영영 안 뜨는 문제 방지)
+  function isInView(entry){
+    if(!entry.isIntersecting) return false;
+    if(entry.intersectionRatio >= THRESHOLD) return true;
+    var vh = entry.rootBounds ? entry.rootBounds.height : window.innerHeight;
+    var need = Math.min(entry.boundingClientRect.height * THRESHOLD, vh * 0.6);
+    return entry.intersectionRect.height >= need;
+  }
+  var steps = [];
+  for(var i = 0; i <= 20; i++) steps.push(i / 20); // 5% 단위로 판정
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var hero = entry.target;
+      if(hero.classList.contains(ACTIVE)){
+        if(REPLAY && !entry.isIntersecting) hero.classList.remove(ACTIVE);
+        return;
+      }
+      if(isInView(entry)){
+        if(!REPLAY) io.unobserve(hero);
+        whenItemsLoaded(hero).then(function(){ hero.classList.add(ACTIVE); });
+      }
+    });
+  }, { threshold:steps });
+
+  Array.prototype.forEach.call(heroes, function(hero){
+    hero.setAttribute('data-hero-init', '');
+    hero.classList.add(READY);
+    io.observe(hero);
+  });
+})();
+
+
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var doc = root.querySelector('.csg-doc');
+  if(!doc) return;
+
+  /* --- 앵커 이동 (URL 해시 변경 없음) --- */
+  var btns = doc.querySelectorAll('.csg-nav-btn');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){
+      var id = this.getAttribute('data-go');
+      var t = doc.querySelector('[data-sec="'+id+'"]');
+      if(!t) return;
+      try{ t.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'}); }
+      catch(e){ t.scrollIntoView(true); }
+    });
+  }
+
+  /* --- 라벨 캡슐 폭 고정 + 글자 균등 배분 --- */
+  function readLS(el){
+    var v = window.getComputedStyle(el).letterSpacing;
+    return v === 'normal' ? 0 : (parseFloat(v) || 0);
+  }
+  function balanceLabels(){
+    var boxes = doc.querySelectorAll('.csg-lbox');
+    for(var b=0;b<boxes.length;b++){
+      var lbs = boxes[b].querySelectorAll('.csg-lb');
+      if(lbs.length < 2) continue;
+      var items = [], i, lb, sp, target = 0;
+      for(i=0;i<lbs.length;i++){
+        lb = lbs[i];
+        sp = lb.firstElementChild;
+        if(!sp || !sp.hasAttribute('data-fit')){
+          sp = document.createElement('span');
+          sp.setAttribute('data-fit','');
+          sp.style.display = 'inline-block';
+          sp.textContent = (lb.textContent||'').replace(/^\s+|\s+$/g,'');
+          lb.textContent = '';
+          lb.appendChild(sp);
+        }
+        sp.style.letterSpacing = '';
+        sp.style.marginRight = '';
+        items.push({sp:sp, len:sp.textContent.length, ls:readLS(lb)});
+      }
+      for(i=0;i<items.length;i++){
+        items[i].run = items[i].sp.getBoundingClientRect().width - items[i].ls;
+        if(items[i].run > target) target = items[i].run;
+      }
+      for(i=0;i<items.length;i++){
+        if(items[i].len < 2) continue;
+        var ls = items[i].ls + (target - items[i].run)/(items[i].len - 1);
+        items[i].sp.style.letterSpacing = ls.toFixed(3)+'px';
+        items[i].sp.style.marginRight = (-ls).toFixed(3)+'px';
+      }
+    }
+  }
+  function refresh(){ balanceLabels(); }
+  refresh();
+  window.addEventListener('load', refresh);
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(refresh)['catch'](function(){});
+  }
+  var rt;
+  window.addEventListener('resize', function(){
+    clearTimeout(rt);
+    rt = setTimeout(refresh, 150);
+  });
+})();
+
+/* --- 선물 썸네일 호버 확대 (웹 전용) --- */
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var sec = root.querySelector('[data-sec="s2"]');
+  if(!sec || !window.matchMedia) return;
+
+  var mqWide = window.matchMedia('(min-width:601px)');
+  var mqFine = window.matchMedia('(hover:hover) and (pointer:fine)');
+  function enabled(){ return mqWide.matches && mqFine.matches; }
+
+  var SCALE = 2.2, GAP = 10;
+  var layer = null, layerImg = null, current = null;
+
+  function build(){
+    layer = document.createElement('div');
+    layer.className = 'csg-zoom';
+    layerImg = document.createElement('img');
+    layerImg.setAttribute('alt', '');
+    layerImg.setAttribute('decoding', 'async');
+    layer.appendChild(layerImg);
+    root.appendChild(layer);
+  }
+
+  function close(){
+    current = null;
+    if(layer) layer.className = 'csg-zoom';
+  }
+
+  function open(fig){
+    var img = fig.querySelector('img');
+    if(!img) return;
+    if(!layer) build();
+    current = fig;
+
+    var r = fig.getBoundingClientRect();
+    var w = Math.round(r.width * SCALE);
+    var h = Math.round(r.height * SCALE);
+    var maxW = window.innerWidth - GAP * 2;
+    var maxH = window.innerHeight - GAP * 2;
+    if(w > maxW){ h = Math.round(h * maxW / w); w = maxW; }
+    if(h > maxH){ w = Math.round(w * maxH / h); h = maxH; }
+
+    /* 상품명을 덜 가리도록 썸네일 오른쪽 끝에 맞춰 왼쪽으로 펼침 */
+    var cx = Math.min(Math.max(r.right + 6 - w / 2, w / 2 + GAP), window.innerWidth - w / 2 - GAP);
+    var cy = Math.min(Math.max(r.top + r.height / 2, h / 2 + GAP), window.innerHeight - h / 2 - GAP);
+
+    layerImg.src = img.currentSrc || img.src;
+    layerImg.style.width = w + 'px';
+    layerImg.style.height = h + 'px';
+    layerImg.style.left = cx + 'px';
+    layerImg.style.top = cy + 'px';
+    layer.className = 'csg-zoom is-on';
+  }
+
+  sec.addEventListener('mouseover', function(e){
+    if(!enabled()) return;
+    var fig = e.target.closest ? e.target.closest('.csg-fig') : null;
+    if(!fig || !sec.contains(fig)){ if(current) close(); return; }
+    if(fig !== current) open(fig);
+  });
+
+  sec.addEventListener('mouseout', function(e){
+    if(!current) return;
+    var to = e.relatedTarget;
+    if(to && current.contains(to)) return;
+    close();
+  });
+
+  sec.addEventListener('mouseleave', close);
+  window.addEventListener('scroll', close, true);
+  window.addEventListener('resize', close);
+})();
+
+/* --- 브랜드 쌀 이미지 슬라이드 --- */
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var sl = root.querySelector('.csg-sl');
+  if(!sl) return;
+  var track = sl.querySelector('.csg-sl-track');
+  var idx = sl.querySelector('.csg-sl-i');
+  var nm  = sl.querySelector('.csg-sl-nm');
+  if(!track) return;
+
+  var items = [].slice.call(track.children);
+  var n = items.length;
+  if(n < 2) return;
+
+  /* 끝에서 처음으로 넘어갈 때도 같은 방향으로 흐르도록 첫 장을 복제해 뒤에 붙인다 */
+  var clone = items[0].cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  track.appendChild(clone);
+
+  var i = 0, timer = null, busy = false, dots = [];
+  var slow = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  function move(k, animate){
+    if(!animate){
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(' + (-k * 100) + '%)';
+      void track.offsetWidth;          /* 리플로우로 즉시 반영 */
+      track.style.transition = '';
+    }else{
+      track.style.transform = 'translateX(' + (-k * 100) + '%)';
+    }
+  }
+  function label(k){
+    var j = k % n;
+    if(idx) idx.textContent = String(j + 1);
+    for(var d = 0; d < dots.length; d++){
+      var on = d === j;
+      dots[d].className = on ? 'csg-sl-dot is-on' : 'csg-sl-dot';
+      if(on) dots[d].setAttribute('aria-current', 'true'); else dots[d].removeAttribute('aria-current');
+    }
+    if(nm){
+      var img = items[j].querySelector('img');
+      nm.textContent = img ? (img.getAttribute('alt') || '') : '';
+    }
+  }
+  function next(){
+    if(busy) return;
+    i++;
+    move(i, true);
+    label(i);
+    if(i === n){                        /* 복제본에 도착하면 티 안 나게 처음으로 되돌린다 */
+      busy = true;
+      var done = function(){
+        track.removeEventListener('transitionend', done);
+        i = 0;
+        move(0, false);
+        busy = false;
+      };
+      track.addEventListener('transitionend', done);
+      setTimeout(function(){ if(busy) done(); }, 700);
+    }
+  }
+  function prev(){
+    if(busy) return;
+    if(i === 0){ i = n; move(n, false); }
+    i--;
+    move(i, true);
+    label(i);
+  }
+
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  function play(){ if(slow) return; stop(); timer = setInterval(next, 3600); }
+
+  var pb = sl.querySelector('.csg-sl-prev');
+  var nb = sl.querySelector('.csg-sl-next');
+  if(pb) pb.addEventListener('click', function(){ prev(); play(); });
+  if(nb) nb.addEventListener('click', function(){ next(); play(); });
+
+  /* 하단 페이지네이션 — 점을 누르면 해당 브랜드로 이동 */
+  function go(t){
+    if(busy || t === i % n) return;
+    i = t;
+    move(i, true);
+    label(i);
+  }
+  var dotsWrap = sl.querySelector('.csg-sl-dots');
+  if(dotsWrap){
+    for(var d = 0; d < n; d++){
+      var db = document.createElement('button');
+      var im = items[d].querySelector('img');
+      db.type = 'button';
+      db.className = 'csg-sl-dot';
+      db.setAttribute('aria-label', (d + 1) + '번째 브랜드' + (im ? ' ' + (im.getAttribute('alt') || '') : ''));
+      (function(t){ db.addEventListener('click', function(){ go(t); play(); }); })(d);
+      dotsWrap.appendChild(db);
+      dots.push(db);
+    }
+  }
+
+  /* 터치 스와이프 — 좌우로 40px 넘게 밀면 넘김(세로 스크롤은 그대로) */
+  var win = sl.querySelector('.csg-sl-win'), sx = 0, sy = 0, touching = false;
+  if(win){
+    win.addEventListener('touchstart', function(e){
+      var t = e.touches[0]; sx = t.clientX; sy = t.clientY; touching = true; stop();
+    }, {passive:true});
+    win.addEventListener('touchend', function(e){
+      if(!touching) return;
+      touching = false;
+      var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+      if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){ if(dx < 0) next(); else prev(); }
+      play();
+    }, {passive:true});
+    win.addEventListener('touchcancel', function(){ touching = false; play(); }, {passive:true});
+  }
+
+  sl.addEventListener('mouseenter', stop);
+  sl.addEventListener('mouseleave', play);
+  sl.addEventListener('focusin', stop);
+  sl.addEventListener('focusout', play);
+
+  label(0);
+  play();
+})();
+
+/* --- 리드문 줄바꿈 유지 ---
+   <br class="csg-nbr">로 끊은 줄은 폭이 허락하는 한 그대로 두고,
+   그중 한 줄이라도 폭이 모자라 저절로 꺾이면 그 문단만 줄바꿈을 푼다 */
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var doc = root.querySelector('.csg-doc');
+  if(!doc || !document.createRange) return;
+
+  var brs = doc.querySelectorAll('.csg-nbr'), ps = [], i, el;
+  for(i = 0; i < brs.length; i++){
+    el = brs[i].parentNode;
+    while(el && el !== doc && el.tagName !== 'P') el = el.parentNode;
+    if(el && el.tagName === 'P' && ps.indexOf(el) < 0) ps.push(el);
+  }
+  if(!ps.length) return;
+
+  function shown(node, stop){
+    for(; node && node !== stop; node = node.parentNode){
+      if(node.nodeType === 1 && window.getComputedStyle(node).display === 'none') return false;
+    }
+    return true;
+  }
+  /* 문단이 실제로 몇 줄로 그려졌는지 — 글자 조각의 세로 위치를 모아서 셈 */
+  function lineCount(p){
+    var r = document.createRange();
+    r.selectNodeContents(p);
+    var rs = r.getClientRects(), tops = [], j, k, same;
+    for(j = 0; j < rs.length; j++){
+      if(rs[j].width < 1 || rs[j].height < 1) continue;
+      same = false;
+      for(k = 0; k < tops.length; k++){
+        if(Math.abs(tops[k] - rs[j].top) < rs[j].height / 2){ same = true; break; }
+      }
+      if(!same) tops.push(rs[j].top);
+    }
+    if(r.detach) r.detach();
+    return tops.length;
+  }
+
+  var lastW = -1;
+  function fit(force){
+    var w = doc.clientWidth;
+    if(!force && w === lastW) return;
+    lastW = w;
+    var flow = [], list, want, j;
+    for(i = 0; i < ps.length; i++) ps[i].classList.remove('is-flow');
+    for(i = 0; i < ps.length; i++){
+      if(!shown(ps[i], doc)) continue;
+      list = ps[i].querySelectorAll('.csg-nbr');
+      want = 1; /* 끊어 둔 대로라면 나와야 할 줄 수 */
+      for(j = 0; j < list.length; j++) if(shown(list[j], ps[i])) want++;
+      if(want > 1 && lineCount(ps[i]) > want) flow.push(ps[i]);
+    }
+    for(i = 0; i < flow.length; i++) flow[i].classList.add('is-flow');
+  }
+
+  fit(true);
+  window.addEventListener('resize', function(){ fit(false); });
+  window.addEventListener('load', function(){ fit(true); });
+  if(document.fonts){
+    if(document.fonts.ready) document.fonts.ready.then(function(){ fit(true); })['catch'](function(){});
+    if(document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', function(){ fit(true); });
+  }
+})();
+
+</script>
