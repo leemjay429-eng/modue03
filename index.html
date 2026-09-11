@@ -479,9 +479,13 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 
 /* ===== S3 : 추석선물 추천 — 대형 숫자 + 괘선 ===== */
 .contents_div .csg-picks{margin-top:48px}
+/* 괘선 3개 — 밴드 그라데이션(#FFEDC6→#F9E0AE)이 아래로 갈수록 진해져 선이 묻히므로 단계적으로 진하게
+   01 위: 기존 --csg-line 유지 / 01·02 사이: 한 단계 / 02 아래: 두 단계 */
+.contents_div .csg-picks{--csg-pk-line2:#F0D8A2;--csg-pk-line3:#EBD096}
 .contents_div .csg-pk{display:grid;grid-template-columns:auto 1fr;gap:28px;
   padding:30px 0;border-top:2px solid var(--csg-line)}
-.contents_div .csg-pk:last-child{border-bottom:2px solid var(--csg-line)}
+.contents_div .csg-pk+.csg-pk{border-top-color:var(--csg-pk-line2)}
+.contents_div .csg-pk:last-child{border-bottom:2px solid var(--csg-pk-line3)}
 .contents_div .csg-pk-n{font-family:'GmarketSansBold','Paperozi','Pretendard',sans-serif;
   font-size:46px;line-height:.9;color:var(--csg-gold);letter-spacing:-0.03em}
 .contents_div .csg-pick-h{font-size:var(--fs-h3);font-weight:800;line-height:1.45;color:var(--csg-navy-x)}
