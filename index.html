@@ -205,6 +205,15 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-hero.csg-hero--active .csg-hero-item .csg-hero-img{animation:none;opacity:1;transform:none}
 }
 
+/* ===== Scroll reveal : 히어로 아래 콘텐츠 등장 (JS가 동작할 때만 숨김) ===== */
+.contents_div .csg-doc .csg-rv{opacity:0;transform:translate3d(0,28px,0)}
+.contents_div .csg-doc .csg-rv.is-in{opacity:1;transform:translate3d(0,0,0);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--rv-d,0s)}
+@media (prefers-reduced-motion:reduce){
+  .contents_div .csg-doc .csg-rv{opacity:1;transform:none}
+}
+
 /* ===== Intro ===== */
 .contents_div .csg-intro{width:100%;padding:58px clamp(16px,6.25%,50px);text-align:center;
   background:var(--csg-cream2);
@@ -469,7 +478,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 .contents_div .csg-ev-a:active{background:#FFF1D4}
 .contents_div .csg-ev-a:focus-visible{outline:3px solid var(--csg-navy);outline-offset:1px}
 
-/* ===== S3 : 특별시 추천 — 대형 숫자 + 괘선 ===== */
+/* ===== S3 : 추석선물 추천 — 대형 숫자 + 괘선 ===== */
 .contents_div .csg-picks{margin-top:48px}
 .contents_div .csg-pk{display:grid;grid-template-columns:auto 1fr;gap:28px;
   padding:30px 0;border-top:2px solid var(--csg-line)}
@@ -788,7 +797,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-evs{margin-top:20px;gap:6px;
     flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start}
   .contents_div .csg-doc .csg-picks{margin-top:34px}
-  /* 특별시 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
+  /* 추석선물 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
   .contents_div .csg-doc .csg-pk{padding:22px 0}
   .contents_div .csg-doc .csg-pk-n{font-size:26px}
   /* 키커 캡슐 — 10px 글자는 광학 중심이 위로 떠 보여 윗여백 보정 */
@@ -1069,7 +1078,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .csg-doc .csg-evs{margin-top:20px;gap:6px;
     flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start}
   .contents_div .csg-doc .csg-picks{margin-top:34px}
-  /* 특별시 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
+  /* 추석선물 추천 — 1열 배치는 700 구간에서, 여기선 크기·여백만 */
   .contents_div .csg-doc .csg-pk{padding:22px 0}
   .contents_div .csg-doc .csg-pk-n{font-size:26px}
   /* 키커 캡슐 — 10px 글자는 광학 중심이 위로 떠 보여 윗여백 보정 */
@@ -1281,7 +1290,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
     <div class="csg-nav-in">
       <button type="button" class="csg-nav-btn" data-go="s1">기부제 안내</button>
       <button type="button" class="csg-nav-btn" data-go="s2">선물 모음집</button>
-      <button type="button" class="csg-nav-btn" data-go="s3">특별시 추천</button>
+      <button type="button" class="csg-nav-btn" data-go="s3">선물 추천</button>
       <button type="button" class="csg-nav-btn" data-go="s4">할인 기획전</button>
       <button type="button" class="csg-nav-btn" data-go="s5">추석 이벤트</button>
     </div>
@@ -1508,12 +1517,12 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 </div>
 
 <script>
-/* ===== HERO : 오브젝트 등장 애니메이션 ===== */
+/* ===== HERO : 뷰포트 진입 시 오브젝트 등장 애니메이션 ===== */
 (function(){
   var root = document.querySelector('.contents_div');
   if(!root) return;
   var READY = 'csg-hero--ready', ACTIVE = 'csg-hero--active';
-  var THRESHOLD = 0.35; // 히어로가 35% 보이면 시작
+  var THRESHOLD = 0.35; // 히어로 면적의 35%가 보이면 시작
   var REPLAY = false;   // true: 화면에 다시 들어올 때마다 재생
 
   var heroes = root.querySelectorAll('.csg-hero:not([data-hero-init])');
@@ -1569,6 +1578,101 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
     hero.classList.add(READY);
     io.observe(hero);
   });
+})();
+
+/* ===== SCROLL REVEAL : 히어로 아래 콘텐츠가 스크롤로 화면에 들어올 때 등장 ===== */
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var doc = root.querySelector('.csg-doc');
+  if(!doc) return;
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 동작 줄이기 설정이거나 미지원 브라우저면 숨기지 않고 그대로 표시
+  if(reduceMotion || !('IntersectionObserver' in window)) return;
+
+  var HIDE = 'csg-rv', SHOW = 'is-in';
+  var STAGGER = 0.09;   // 같이 들어온 요소끼리 순차 간격(초)
+  var MAX_DELAY = 0.36; // 순차 지연 최대치(초)
+  var DURATION = 700;   // CSS 전환 시간(ms)과 맞춤
+
+  // 등장 단위: 인트로 액자 + 각 섹션·푸터의 직계 요소
+  // 장식(띠·구름·꾸밈 이미지·등불·지붕)은 자체 애니메이션이 있어 제외
+  var SKIP = /(^|\s)(csg-band4|csg-cloud|csg-deco|csg-lan|csg-roof)(\s|$)/;
+  var targets = [];
+  var frame = doc.querySelector('.csg-intro > .csg-frame');
+  if(frame) targets.push(frame);
+  Array.prototype.forEach.call(doc.querySelectorAll('.csg-sec[data-sec], .csg-foot'), function(sec){
+    Array.prototype.forEach.call(sec.children, function(el){
+      var cls = el.getAttribute('class') || '';
+      if(!SKIP.test(cls)) targets.push(el);
+    });
+  });
+
+  // 전환이 끝나면 클래스를 걷어내 원래 스타일(버튼 hover 전환 등)로 복귀
+  function cleanup(el){
+    el.classList.remove(HIDE, SHOW);
+    el.style.removeProperty('--rv-d');
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    var entering = entries.filter(function(e){ return e.isIntersecting; })
+      .sort(function(a, b){ return a.boundingClientRect.top - b.boundingClientRect.top; });
+    entering.forEach(function(entry, i){
+      var el = entry.target;
+      io.unobserve(el);
+      var delay = Math.min(i * STAGGER, MAX_DELAY);
+      el.style.setProperty('--rv-d', delay + 's');
+      el.classList.add(SHOW);
+      var done = false;
+      function finish(){ if(done) return; done = true; cleanup(el); }
+      el.addEventListener('transitionend', function te(ev){
+        if(ev.target !== el || ev.propertyName !== 'transform') return;
+        el.removeEventListener('transitionend', te);
+        finish();
+      });
+      setTimeout(finish, DURATION + delay * 1000 + 150); // transitionend 누락 대비
+    });
+  }, { rootMargin:'0px 0px -12% 0px', threshold:0 });
+
+  var vh = window.innerHeight || document.documentElement.clientHeight;
+  var hidden = [];
+  targets.forEach(function(el){
+    // 접속 시점에 이미 화면에 보이는 요소는 숨기지 않음 (깜빡임 방지)
+    if(el.getBoundingClientRect().top < vh) return;
+    el.classList.add(HIDE);
+    hidden.push(el);
+    io.observe(el);
+  });
+  if(!hidden.length) return;
+
+  // 페이지 맨 끝에 붙은 요소(푸터 태그 등)는 더 스크롤할 수 없어 등장선(화면 아래 12%)에
+  // 못 닿을 수 있음 → 스크롤이 바닥에 닿으면 화면 안에 있는 남은 요소를 모두 등장
+  var ticking = false;
+  function atBottom(){
+    ticking = false;
+    var de = document.documentElement;
+    var h = window.innerHeight || de.clientHeight;
+    var y = window.pageYOffset || de.scrollTop;
+    if(y + h < Math.max(de.scrollHeight, document.body.scrollHeight) - 4) return;
+    var left = 0;
+    hidden.forEach(function(el){
+      if(!el.classList.contains(HIDE) || el.classList.contains(SHOW)) return;
+      if(el.getBoundingClientRect().top < h){
+        io.unobserve(el);
+        el.style.setProperty('--rv-d', '0s');
+        el.classList.add(SHOW);
+        setTimeout(function(){ cleanup(el); }, DURATION + 150);
+      } else { left++; }
+    });
+    if(!left && !doc.querySelector('.' + HIDE + ':not(.' + SHOW + ')')) window.removeEventListener('scroll', onScroll);
+  }
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    (window.requestAnimationFrame || function(f){ return setTimeout(f, 16); })(atBottom);
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
 })();
 
 
